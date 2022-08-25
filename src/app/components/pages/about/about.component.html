@@ -1,0 +1,332 @@
+<!-- Navbar -->
+<app-navbar-style-three></app-navbar-style-three>
+<!-- End Navbar -->
+
+<!-- Page Title -->
+<div class="page-title-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="banner-shape-three">
+                    <div class="container-fluid">
+                        <div class="banner-content two three">
+                            <!-- <div class="d-table"> -->
+
+                            <div class="banner-form-area">
+                                <form [formGroup]="form" (ngSubmit)="submit()">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label><i class='bx bx-search'></i></label>
+                                                <input type="text" class="form-control" formControlName="Search" placeholder="Search Your Job">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <ng-autocomplete
+                                                
+                                                [data]="duplicate"
+                                                [searchKeyword]="keywordTechnology"
+                                                placeholder="Technology"
+                                                (selected)='selectEvent($event)'
+                                                (inputChanged)='onChangeSearch($event)'
+                                                (inputFocused)='onFocused($event)'
+                                                formControlName="Technology"
+                                                [itemTemplate]="itemTemplate"
+                                                [notFoundTemplate]="notFoundTemplate"
+                                                [initialValue]="">
+                                              </ng-autocomplete>
+                                         
+                                              <ng-template #itemTemplate let-item>
+                                                <a [innerHTML]="item.Technology"></a>
+                                              </ng-template>
+                                            
+                                              <ng-template #notFoundTemplate let-notFound>
+                                                <div [innerHTML]="notFound"></div>
+                                              </ng-template>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <ng-autocomplete
+                                                  [data]="districtLocation"
+                                                  [searchKeyword]="keyword"
+                                                  placeholder="Location"
+                                                  (selected)='selectEvent($event)'
+                                                  (inputChanged)='onChangeSearch($event)'
+                                                  (inputFocused)='onFocused($event)'
+                                                  formControlName="Location"
+                                                  [itemTemplate]="itemTemplates"
+                                                  [notFoundTemplate]="notFoundTemplate">
+                                                </ng-autocomplete>
+                                              
+                                                <ng-template #itemTemplates let-item>
+                                                  <a [innerHTML]="item"></a>
+                                                </ng-template>
+                                              
+                                                <ng-template #notFoundTemplate let-notFound>
+                                                  <div [innerHTML]="notFound"></div>
+                                                </ng-template>
+                                              </div>
+                                            <!-- <div class="form-group two">
+                                                <select formControlName="Location">
+                                                    <option value="" disabled selected><label><i class='bx bx-location-plus'></i></label>Location</option>
+                                                    <option *ngFor="let UniqueLocation of duplicateLocation">{{UniqueLocation.Location}}</option>
+                                                    
+                                                </select>	
+                                            </div> -->
+                                        </div>
+                                     
+                                    </div>
+
+
+                                    <button type="submit" class="btn">Search Job <i class='bx bx-search'></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Title -->
+
+<!-- New -->
+<div class="new-area pt-100 pb-70">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="new-img">
+                    <img src="assets/img/about.jpg" alt="New">
+                    <img src="assets/img/about-shape.png" alt="New">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="about-content">
+                    <div class="section-title">
+                        <span class="sub-title">Explore New Life</span>
+                        <h2>Who We Are</h2>
+                    </div>
+                    <p>DB cart pvt ltd is a mobile and web application development with its headquarters based at chennai.</p>
+                    <p>Our primary focus to provide professional,cost effective solutions to our clients. </p>
+                    <p>Clients from different geographical locations use our services to get best software solutions.</p>
+                    <p>We have a creative team of skilled developers and managers who have depth knowledge in various technologies including mobile and web applications development to serve our global clients..!</p>
+                
+                    
+                    <a class="cmn-btn" routerLink="/contact">Get Started<i class='bx bx-plus'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End New -->
+
+<!-- Counter -->
+<div class="counter-area two pt-100">
+    <div class="counter-shape"><img src="assets/img/home-one/banner/shape-bottom.png" alt="Shape"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-lg-3">
+                <div class="counter-item">
+                    <i class="flaticon-"></i>               
+                    <h3>8 Years On The Market </h3>
+        
+                </div>
+            </div>
+
+            <!-- <div class="col-sm-6 col-lg-3"> -->
+                <!-- <div class="counter-item"> -->
+                    <!-- <i class="flaticon-candidate"></i> -->
+                    <!-- <p>TOTAL JOBS</p>    -->
+                    <!-- <h3><span class="odometer" data-count="45257">00</span> </h3> -->
+                <!-- </div> -->
+            <!-- </div> -->
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="counter-item">
+                    <i class="flaticon-working-at-home"></i>
+                    
+                    <h3>
+                        30+ Team Members 
+                    </h3>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="counter-item">
+                    <i class="flaticon-choice"></i>
+                    
+                    <h3>100% Satisfaction Rate</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Counter -->
+
+<!-- Work -->
+<section class="work-area pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">Our Possibilities</span>
+            <h2>History Begins In 2014 </h2>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="work-item">
+                    <i class="flaticon-verify"></i>
+                    <span>01</span>
+                    <h3>2014 Planning</h3>
+                    <p>The Journey Begins As Freenlancer</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="work-item">
+                    <i class="flaticon-file"></i>
+                    <span>02</span>
+                    <h3>2015 First Achievement</h3>
+                    <p>Got Out First Corporate Order From Rossitek </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="work-item">
+                    <i class="flaticon-comment"></i>
+                    <span>03</span>
+                    <h3>2017 First Direct Client</h3>
+                    <p>Received Project From Sutherland.We Are First IOS Developer For Them </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="work-item">
+                    <i class="flaticon-comment"></i>
+                    <span>04</span>
+                    <h3>2018 First Long Term Project</h3>
+                    <p>Received First Long Term Project From ASTA CRS </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="work-item">
+                    <i class="flaticon-comment"></i>
+                    <span>05</span>
+                    <h3>2019 Our First Product</h3>
+                    <p>Made Our Idea On education Skillsbro,And Ecom Deltabazaar</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="work-item">
+                    <i class="flaticon-comment"></i>
+                    <span>06</span>
+                    <h3>2022 Ready For Rock</h3>
+                    <p>Now It's Time TO Do Diversified Business In IT Industry </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Work -->
+
+<!-- Explore -->
+<section class="explore-area ptb-100">
+    <div class="container">
+        <div class="explore-item">
+            <div class="section-title">
+                <span class="sub-title">Explore New Life</span>
+                <h2>Be Found Put Your Cv In Front Of Great Employers</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut tur incidunt laborequaerat voluptatem.</p>
+            <ul>
+                <li>
+                    <a class="left-btn" routerLink="/">Upload Your Resume <i class="flaticon-upload"></i></a>
+                </li>
+                <li>
+                    <span>CEO Message</span>
+                    <a class="right-btn popup-youtube" href="https://www.youtube.com/watch?v=07d2dXHYb94&t=88s"><i class='bx bx-play'></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Explore -->
+
+<!-- Candidate -->
+<section class="candidate-area two ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">Working Process</span>
+            <h2>Leadership Team</h2>
+        </div>
+
+        <div class="candidate-slider owl-theme owl-carousel">
+            <div class="candidate-item">
+                <div class="left">
+                    <h3><a routerLink="/candidate-details">Arielle Terry</a></h3>
+                    <span>Web Developer</span>
+                    <p>I’m IRanin dolor sit amet conscu adiing elitsed eusmod tempor</p>
+                    <ul>
+                        <li>Php</li>
+                        <li>jQuery</li>
+                        <li>WordPress</li>
+                        <li>CSS3</li>
+                        <li>HTML5</li>
+                    </ul>
+                    <div class="cmn-link">
+                        <a routerLink="/single-resume"><i class="flaticon-right-arrow one"></i> View Resume <i class="flaticon-right-arrow two"></i></a>
+                    </div>
+                </div>
+                <img src="assets/img/home-two/candidate1.jpg" alt="Candidate">
+            </div>
+
+            <div class="candidate-item">
+                <div class="left">
+                    <h3><a routerLink="/candidate-details">Alexander Max</a></h3>
+                    <span>Senior UX/UI Designer</span>
+                    <p>I’m Max dolor sit amet conscu adiing elitsed eusmod tempor</p>
+                    <ul>
+                        <li>CSS</li>
+                        <li>Creative</li>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>HTML5</li>
+                    </ul>
+                    <div class="cmn-link">
+                        <a routerLink="/single-resume"><i class="flaticon-right-arrow one"></i> View Resume <i class="flaticon-right-arrow two"></i></a>
+                    </div>
+                </div>
+                <img src="assets/img/home-two/candidate2.jpg" alt="Candidate">
+            </div>
+
+            <div class="candidate-item">
+                <div class="left">
+                    <h3><a routerLink="/candidate-details">Tom Henry</a></h3>
+                    <span>SEO</span>
+                    <p>I’m Max dolor sit amet conscu adiing elitsed eusmod tempor</p>
+                    <ul>
+                        <li>CSS</li>
+                        <li>Creative</li>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>HTML5</li>
+                    </ul>
+                    <div class="cmn-link">
+                        <a routerLink="/single-resume"><i class="flaticon-right-arrow one"></i> View Resume <i class="flaticon-right-arrow two"></i></a>
+                    </div>
+                </div>
+                <img src="assets/img/home-two/candidate3.jpg" alt="Candidate">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Candidate -->
+
+<!-- Footer -->
+<app-footer-style-two></app-footer-style-two>
+<!-- End Footer -->

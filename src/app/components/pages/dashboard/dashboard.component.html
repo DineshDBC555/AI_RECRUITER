@@ -1,0 +1,941 @@
+<!-- Navbar -->
+<!-- <app-navbar-style-three></app-navbar-style-three> -->
+<!-- End Navbar -->
+
+<!-- Page Title -->
+<!-- <div class="page-title-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="title-item">
+                    <h2>Dashboard</h2>
+                    <ul>
+                        <li>
+                            <img src="assets/img/home-three/title-img-two.png" alt="Image">
+                            <a routerLink="/">Home</a>
+                        </li>
+                        <li><span>/</span></li>
+                        <li>Dashboard</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- End Page Title -->
+
+<!-- Dashboard -->
+<!-- <div class="dashboard-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="profile-item">
+                    <img src="assets/img/dashboard1.jpg" alt="Dashboard">
+                    <h2>Tom Henry</h2>
+                    <span>Web Developer</span>
+                </div>
+
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home"
+                        role="tab" aria-controls="v-pills-home" aria-selected="true"><i class='bx bx-user'></i> My
+                        Profile</a>
+
+                    <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-pills-messages"
+                        role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                        <div class="profile-list">
+                            <i class='bx bxs-inbox'></i>
+                            Applied Jobs
+                        </div>
+                    </a>
+
+                    <a routerLink="/single-resume">
+                        <div class="profile-list"><i class='bx bx-note'></i> My Resume</div>
+                    </a>
+
+                    <a routerLink="/login">
+                        <div class="profile-list"><i class='bx bx-log-out'></i> Logout</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-12">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <div class="profile-content">
+                            <form [formGroup]="educationForm" (ngSubmit)="onSubmit()">
+                                <div class="profile-content-inner">
+                                    <h2>Basic Info</h2>
+                                    <div formArrayName="basicdetails">
+
+                                        <div *ngFor="let quantity of basicdetails().controls; let i=index"
+                                            [formGroupName]="i">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Your Name:</label>
+                                                        <input type="text" class="form-control" placeholder="Tom Henry"
+                                                            formControlName="Name">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Your Email:</label>
+                                                        <input type="email" class="form-control"
+                                                            placeholder="hello@alzo.com" formControlName="Email">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Phone:</label>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="+123 - 456 - 789" formControlName="Phone">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Date Of Birth:</label>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="01/01/1995" formControlName="Dob"> -->
+<!-- <mat-form-field appearance="fill" style="
+                                                            width: 100%;">
+                                                            <mat-label>Choose a date</mat-label>
+                                                            <input matInput [matDatepicker]="picker"
+                                                                formControlName="Dob">
+                                                            <mat-hint>MM/DD/YYYY</mat-hint>
+                                                            <mat-datepicker-toggle matSuffix [for]="picker">
+                                                            </mat-datepicker-toggle>
+                                                            <mat-datepicker #picker></mat-datepicker>
+                                                        </mat-form-field>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Job Title:</label>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Web Developer" formControlName="JobTitle">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Position:</label>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Team Leader" formControlName="Position">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Salary:</label>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="$1500/per month" formControlName="Salary">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Cover Picture:</label><br>
+                                                        <input type="file" formControlName="CoverPicture">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="profile-content-inner">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-sm-12"></div>
+                                            <div class="col-lg-4 col-sm-12">
+                                                <h2>Education</h2>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-12"><a style="float: right;"
+                                                    (click)="addEducation()">
+                                                    <mat-icon class="blue-icon">add_circle</mat-icon>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                    <div class="table table-bordered" formArrayName="education">
+
+                                        <div *ngFor="let quantity of education().controls; let i=index"
+                                            [formGroupName]="i">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Title:</label>
+                                                        <input type="text" class="form-control" formControlName="Title"
+                                                            placeholder="Under Graduate">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Degree:</label>
+                                                        <input type="text" class="form-control" formControlName="Degree"
+                                                            placeholder="Bachelor of Computer Science">
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Institute:</label>
+                                                        <input type="text" class="form-control"
+                                                            formControlName="Institute"
+                                                            placeholder="Alzo University & Technology, UK">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Year:</label>
+                                                        <input type="text" class="form-control" formControlName="Year"
+                                                            placeholder="2015 - 2020">
+                                                       (keypress)="this.numbersOnly.numberOnly($event)" -->
+<!-- </div> -->
+<!-- <div class="col-lg-3" *ngIf="i>0" style="float: right">
+                                                        <a (click)="removeEducation(i)">
+                                                            <mat-icon class="red-icon">remove_circle</mat-icon>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="profile-content-inner">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-sm-12"></div>
+                                            <div class="col-lg-4 col-sm-12">
+                                                <h2>Experience</h2>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-12"><a style="float: right;"
+                                                    (click)="addExperience()">
+                                                    <mat-icon class="blue-icon">add_circle</mat-icon>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                    <div class="table table-bordered" formArrayName="experience">
+
+                                        <div *ngFor="let quantity of experience().controls; let i=index"
+                                            [formGroupName]="i">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Company Name:</label>
+                                                        <input type="text" class="form-control"
+                                                            formControlName="CompanyName" placeholder="IT Solution">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Location:</label>
+                                                        <input type="text" class="form-control"
+                                                            formControlName="Location" placeholder="Tanjore">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Position:</label>
+                                                        <input type="text" class="form-control" c
+                                                            placeholder="Software Engineer" formControlName="Position">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Stat Date to End Date:</label>
+                                                        <mat-form-field appearance="fill" style="
+                                                        width: 100%;">
+                                                            <mat-label>Enter a date range</mat-label>
+                                                            <mat-date-range-input [rangePicker]="picker">
+                                                                <input matStartDate placeholder="Start date"
+                                                                    formControlName="StartDate">
+                                                                <input matEndDate placeholder="End date"
+                                                                    formControlName="EndDate">
+                                                            </mat-date-range-input>
+                                                            <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                                                            <mat-datepicker-toggle matSuffix [for]="picker">
+                                                            </mat-datepicker-toggle>
+                                                            <mat-date-range-picker #picker></mat-date-range-picker>
+                                                        </mat-form-field>
+                                                        <div class="col-lg-3" *ngIf="i>0" style="float: right">
+                                                            <a (click)="removeExperience(i)">
+                                                                <mat-icon class="red-icon">remove_circle</mat-icon>
+                                                            </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="profile-content-inner">
+                                    <h2>Social Links</h2>
+                                    <div formArrayName="basicdetails">
+                                        <div *ngFor="let quantity of basicdetails().controls; let i=index"
+                                            [formGroupName]="i">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <label>Facebook:</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="https://www.facebook.com" formControlName="Facebook">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <label>Twitter:</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="https://www.twitter.com" formControlName="Twitter">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <label>Instagram:</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="https://www.instagram.com" formControlName="Instagram">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group">
+                                                <label>Linkedin:</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="https://www.linkedin.com" formControlName="LinkedIn">
+                                            </div>
+                                        </div>
+                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn dashboard-btn">Save Your Information</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab">
+                        <div class="employer-item">
+                            <a routerLink="/job-details">
+                                <img src="assets/img/home-one/job1.png" alt="Employer">
+                                <h3>Product Designer</h3>
+                                <ul>
+                                    <li><i class="flaticon-send"></i> Los Angeles, CS, USA</li>
+                                    <li>5 months ago</li>
+                                </ul>
+                                <p>We are Looking for a skilled Ul/UX designer amet conscu adiing elitsed do eusmod
+                                    tempor</p>
+                                <span class="span-one">Accounting</span>
+                                <span class="span-two">FULL TIME</span>
+                            </a>
+                        </div>
+
+                        <div class="employer-item">
+                            <a routerLink="/job-details">
+                                <img src="assets/img/home-one/job2.png" alt="Employer">
+                                <h3>Sr. Shopify Developer</h3>
+                                <ul>
+                                    <li><i class="flaticon-send"></i> Houston, TX, USA</li>
+                                    <li>4 months ago</li>
+                                </ul>
+                                <p>Responsible for managing skilled Ul/UX designer amet conscu adiing elitsed do eusmod
+                                </p>
+                                <span class="span-one">Accounting</span>
+                                <span class="span-two two">FULL TIME</span>
+                            </a>
+                        </div>
+
+                        <div class="employer-item">
+                            <a routerLink="/job-details">
+                                <img src="assets/img/home-one/job3.png" alt="Employer">
+                                <h3>Tax Manager</h3>
+                                <ul>
+                                    <li><i class="flaticon-send"></i> Ho Chi Minh City, Vietnam</li>
+                                    <li>6 months ago</li>
+                                </ul>
+                                <p>International collaborative a skilled Ul/UX designer amet conscu adiing elitsed do
+                                    eusmod</p>
+                                <span class="span-one two">Broardcasting</span>
+                                <span class="span-two three">FREELANCER</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  -->
+<!-- End Dashboard -->
+
+<!-- Footer -->
+<!-- <app-footer-style-two></app-footer-style-two>  -->
+<!-- End Footer -->
+<!-- Navbar -->
+<app-navbar-style-three></app-navbar-style-three>
+<!-- End Navbar -->
+
+<!-- Page Title -->
+<div class="page-title-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="banner-shape-three">
+                    <div class="container-fluid">
+                        <div class="banner-content two three">
+                            <!-- <div class="d-table"> -->
+
+                            <div class="banner-form-area">
+                                <form [formGroup]="form" (ngSubmit)="submit()">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label><i class='bx bx-search'></i></label>
+                                                <input type="text" class="form-control" formControlName="Search"
+                                                    placeholder="Search Your Job">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <ng-autocomplete [data]="duplicate" [searchKeyword]="keywordTechnology"
+                                                    placeholder="Technology" (selected)='selectEvent($event)'
+                                                    (inputChanged)='onChangeSearch($event)'
+                                                    (inputFocused)='onFocused($event)' formControlName="Technology"
+                                                    [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate"
+                                                    [initialValue]="">
+                                                </ng-autocomplete>
+
+                                                <ng-template #itemTemplate let-item>
+                                                    <a [innerHTML]="item.Technology"></a>
+                                                </ng-template>
+
+                                                <ng-template #notFoundTemplate let-notFound>
+                                                    <div [innerHTML]="notFound"></div>
+                                                </ng-template>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <ng-autocomplete [data]="districtLocation" [searchKeyword]="keyword"
+                                                    placeholder="Location" (selected)='selectEvent($event)'
+                                                    (inputChanged)='onChangeSearch($event)'
+                                                    (inputFocused)='onFocused($event)' formControlName="Location"
+                                                    [itemTemplate]="itemTemplates"
+                                                    [notFoundTemplate]="notFoundTemplate">
+                                                </ng-autocomplete>
+
+                                                <ng-template #itemTemplates let-item>
+                                                    <a [innerHTML]="item"></a>
+                                                </ng-template>
+
+                                                <ng-template #notFoundTemplate let-notFound>
+                                                    <div [innerHTML]="notFound"></div>
+                                                </ng-template>
+                                            </div>
+                                            <!-- <div class="form-group two">
+                                                <select formControlName="Location">
+                                                    <option value="" disabled selected><label><i class='bx bx-location-plus'></i></label>Location</option>
+                                                    <option *ngFor="let UniqueLocation of duplicateLocation">{{UniqueLocation.Location}}</option>
+                                                    
+                                                </select>	
+                                            </div> -->
+                                        </div>
+
+                                    </div>
+
+
+                                    <button type="submit" class="btn">Search Job <i class='bx bx-search'></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Page Title -->
+
+            <!-- Dashboard -->
+            <div class="dashboard-area ptb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="profile-item">
+                                <img src={{coverpicture}} alt="Dashboard">
+                                <h2>{{userName}}</h2>
+                                <!-- <span>Web Developer</span> -->
+                            </div>
+
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                    href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i
+                                        class='bx bx-user'></i> My
+                                    Profile</a>
+
+                                <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                    href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                    aria-selected="false">
+                                    <div class="profile-list">
+                                        <i class='bx bxs-inbox'></i> Applied Jobs
+                                    </div>
+                                </a>
+
+                                <a routerLink="/single-resume">
+                                    <div class="profile-list"><i class='bx bx-note'></i> My Resume</div>
+                                </a>
+
+                                <a routerLink="/login">
+                                    <div class="profile-list"><i class='bx bx-log-out'></i> Logout</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 col-md-12">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                    aria-labelledby="v-pills-home-tab">
+                                    <div class="profile-content">
+                                        <form [formGroup]="educationForm" (ngSubmit)="onSubmit()">
+                                            <div class="profile-content-inner">
+                                                <h2>Basic Info</h2>
+                                                <div formArrayName="basicdetails">
+
+                                                    <div *ngFor="let quantity of basicdetails().controls; let i=index"
+                                                        [formGroupName]="i">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Your Name:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Tom Henry" formControlName="Name">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Your Email:</label>
+                                                                    <input type="email" class="form-control"
+                                                                        placeholder="hello@alzo.com"
+                                                                        formControlName="Email">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Phone:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="+123 - 456 - 789"
+                                                                        formControlName="Phone">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Date Of Birth:</label>
+                                                                    <!-- <input type="text" class="form-control"
+                                                            placeholder="01/01/1995" formControlName="Dob"> -->
+                                                                    <mat-form-field style="
+                                                            width: 100%;">
+                                                                        <mat-label>Choose a date</mat-label>
+                                                                        <input matInput [matDatepicker]="picker"
+                                                                            formControlName="Dob">
+                                                                        <mat-hint>MM/DD/YYYY</mat-hint>
+                                                                        <mat-datepicker-toggle matSuffix [for]="picker">
+                                                                        </mat-datepicker-toggle>
+                                                                        <mat-datepicker #picker></mat-datepicker>
+                                                                    </mat-form-field>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Job Title:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Web Developer"
+                                                                        formControlName="JobTitle">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Position:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Team Leader"
+                                                                        formControlName="Position">
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Salary:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="$1500/per month"
+                                                                        formControlName="Salary"
+                                                                        (keypress)="this.numbersOnly.numberOnly($event)"
+                                                                        autocomplete="off"
+                                                                        [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Cover Picture:</label><br>
+                                                                    <input type="file" (change)="onChange($event)">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="profile-content-inner">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-sm-12"></div>
+                                                        <div class="col-lg-4 col-sm-12">
+                                                            <h2 style="width:95%;float: left;">Education</h2>
+
+                                                        </div>
+                                                        <div class="col-lg-4 col-sm-12">
+                                                            <a style="float: right;" (click)="addEducation()">
+                                                                <mat-icon class="blue-icon" style="width:425%">
+                                                                    add_circle</mat-icon>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="table table-bordered" formArrayName="education">
+
+                                                    <div *ngFor="let quantity of education().controls; let i=index"
+                                                        [formGroupName]="i">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Title:</label>
+                                                                    <!-- <input type="text" class="form-control" formControlName="Id" placeholder="" hidden> -->
+                                                                    <input type="text" class="form-control"
+                                                                        formControlName="Title"
+                                                                        placeholder="Under Graduate">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Degree:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        formControlName="Degree"
+                                                                        placeholder="Bachelor of Computer Science">
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Institute:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        formControlName="Institute"
+                                                                        placeholder="Alzo University & Technology, UK">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Year:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        formControlName="Year"
+                                                                        placeholder="2015 - 2020">
+                                                                    <!-- (keypress)="this.numbersOnly.numberOnly($event)" -->
+                                                                </div>
+                                                                <div class="col-lg-3" *ngIf="i>0" style="float: right">
+                                                                    <a (click)="removeEducation(i)">
+                                                                        <mat-icon class="red-icon" style="width:195%">
+                                                                            remove_circle</mat-icon>
+                                                                    </a>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+
+                                            <div class="profile-content-inner">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-sm-12"></div>
+                                                        <div class="col-lg-4 col-sm-12">
+                                                            <h2 style="width:95%;float: left;">Experience</h2>
+
+                                                        </div>
+                                                        <div class="col-lg-4 col-sm-12">
+                                                            <a style="float: right;" (click)="addExperience()">
+                                                                <mat-icon class="blue-icon" style="width:425%">
+                                                                    add_circle</mat-icon>
+                                                            </a>
+                                                        </div>
+
+                                                        <!-- <div class="col-lg-4 col-sm-12"></div>
+                                            <div class="col-lg-4 col-sm-12">
+                                                <h2 style="width:95%;float: left;">Experience</h2>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-12" style="width:485%"> 
+                                                <a style="float: right;" (click)="addExperience()">
+                                                    <mat-icon class="blue-icon" style="width:360%">add_circle</mat-icon>
+                                                </a>
+                                            </div> -->
+                                                    </div>
+
+                                                </div>
+                                                <div class="table table-bordered" formArrayName="experience">
+
+                                                    <div *ngFor="let quantity of experience().controls; let i=index"
+                                                        [formGroupName]="i">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Company Name:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        formControlName="CompanyName"
+                                                                        placeholder="IT Solution">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Location:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        formControlName="Location"
+                                                                        placeholder="Tanjore">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Position:</label>
+                                                                    <input type="text" class="form-control" c
+                                                                        placeholder="Software Engineer"
+                                                                        formControlName="Position">
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-lg-6 col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Stat Date to End Date:</label>
+                                                                    <mat-form-field style="
+                                                        width: 100%;">
+                                                                        <mat-label>Enter a date range</mat-label>
+                                                                        <mat-date-range-input [rangePicker]="picker">
+                                                                            <input matStartDate placeholder="Start date"
+                                                                                formControlName="StartDate">
+                                                                            <input matEndDate placeholder="End date"
+                                                                                formControlName="EndDate">
+                                                                        </mat-date-range-input>
+                                                                        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                                                                        <mat-datepicker-toggle matSuffix [for]="picker">
+                                                                        </mat-datepicker-toggle>
+                                                                        <mat-date-range-picker #picker>
+                                                                        </mat-date-range-picker>
+                                                                    </mat-form-field>
+                                                                </div>
+
+
+
+                                                            </div>
+                                                            <div class="col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <label>Description:</label>
+                                                                    <textarea name="Description" class="form-control"
+                                                                        formControlName="Description"
+                                                                        style="height:189%" cols="60" rows="8"
+                                                                        required></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12" *ngIf="i>0">
+                                                                <a (click)="removeExperience(i)" style="float: right">
+                                                                    <mat-icon class="red-icon" style="width:195%">
+                                                                        remove_circle</mat-icon>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profile-content-inner" formArrayName="experience">
+                                                <div *ngFor="let quantity of experience().controls; let i=index"
+                                                    [formGroupName]="i">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-sm-12"></div>
+                                                            <div class="col-lg-4 col-sm-12">
+                                                                <h2 style="width:95%;float: left;">Skills</h2>
+
+                                                            </div>
+                                                            <mat-form-field class="example-chip-list">
+
+                                                                <mat-label>Favorite skills </mat-label>
+                                                                <mat-chip-list #chipList aria-label="skill selection">
+
+                                                                    <mat-chip *ngFor="let skill of skills"
+                                                                        (removed)="remove(skill)">
+                                                                        {{skill.name}}
+                                                                        <button matChipRemove>
+                                                                            <mat-icon>cancel</mat-icon>
+                                                                        </button>
+                                                                    </mat-chip>
+                                                                    <input type="text" placeholder="New skill..."
+                                                                        [matChipInputFor]="chipList"
+                                                                        (matChipInputTokenEnd)="add($event)"
+                                                                        formControlName="Skills">
+
+
+                                                                </mat-chip-list>
+
+                                                            </mat-form-field>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+
+                                            <div class="profile-content-inner" formArrayName="basicdetails">
+                                                <h2>Social Links</h2>
+                                                <div *ngFor="let quantity of basicdetails().controls; let i=index"
+                                                    [formGroupName]="i">
+
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-12">
+                                                            <div class="form-group">
+                                                                <label>Facebook:</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="https://www.facebook.com"
+                                                                    formControlName="Facebook">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-6 col-md-12">
+                                                            <div class="form-group">
+                                                                <label>Twitter:</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="https://www.twitter.com"
+                                                                    formControlName="Twitter">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-6 col-md-12">
+                                                            <div class="form-group">
+                                                                <label>Instagram:</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="https://www.instagram.com"
+                                                                    formControlName="Instagram">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-6 col-md-12">
+                                                            <div class="form-group">
+                                                                <label>LinkedIn:</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="https://www.linkedin.com"
+                                                                    formControlName="LinkedIn">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button type="submit" class="btn dashboard-btn">Save Your
+                                                Information</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                                <!-- <div class="employer-item"> -->
+                                <!-- {{appliedjob | json}} -->
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                    aria-labelledby="v-pills-messages-tab">
+                                    <div class="employer-item" *ngFor="let title of appliedjob">
+                                        <!-- <a routerLink="/"> -->
+
+                                        <img src="assets/img/home-one/job2.png" alt="Employer">
+                                        <h3>{{title.Name}}</h3>
+                                        <ul>
+                                            <li><i class="flaticon-send"></i> {{title.Location}}</li>
+                                            <li>{{title.CreatedDate | DayAgo}}</li>
+                                            <p>{{title.Jobdescription}}</p>
+                                            <span class="span-one">{{title.Technology}}</span>
+                                            <span class="span-two">{{title.JobType}}</span>
+  
+                                        </ul>
+                                        <!-- </a> -->
+                                    </div>
+                                    <div *ngIf="!appliedjob">
+                                        No Jobs Found.!
+                                    </div>
+                                    <!-- <div class="employer-item">
+                            <a routerLink="/job-details">
+                                <img src="assets/img/home-one/job2.png" alt="Employer">
+                                <h3>Sr. Shopify Developer</h3>
+                                <ul>
+                                    <li><i class="flaticon-send"></i> Houston, TX, USA</li>
+                                    <li>4 months ago</li>
+                                </ul>
+                                <p>Responsible for managing skilled Ul/UX designer amet conscu adiing elitsed do eusmod
+                                </p>
+                                <span class="span-one">Accounting</span>
+                                <span class="span-two two">FULL TIME</span>
+                            </a>
+                        </div>
+
+                        <div class="employer-item">
+                            <a routerLink="/job-details">
+                                <img src="assets/img/home-one/job3.png" alt="Employer">
+                                <h3>Tax Manager</h3>
+                                <ul>
+                                    <li><i class="flaticon-send"></i> Ho Chi Minh City, Vietnam</li>
+                                    <li>6 months ago</li>
+                                </ul>
+                                <p>International collaborative a skilled Ul/UX designer amet conscu adiing elitsed do
+                                    eusmod</p>
+                                <span class="span-one two">Broardcasting</span>
+                                <span class="span-two three">FREELANCER</span>
+                            </a>
+                        </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Dashboard -->
+
+            <!-- Footer -->
+            <app-footer-style-two></app-footer-style-two>
+            <!-- End Footer -->

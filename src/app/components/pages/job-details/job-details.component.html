@@ -1,0 +1,321 @@
+<!-- Navbar -->
+<app-navbar-style-three></app-navbar-style-three>
+<!-- End Navbar -->
+
+<!-- Page Title -->
+<div class="page-title-area two">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="left">
+                            <img src="assets/img/job-details1.png" alt="Details">
+                            <h2>{{jobDetails.Name}}</h2>
+                            <ul>
+                                <li><i class='bx bx-pie-chart-alt-2'></i> {{jobDetails.Technology}}</li>
+                                <li><i class='bx bx-time'> {{ jobDetails.CreatedDate | DayAgo }}</i>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="right">
+                            <div *ngIf="appliedjobs">
+                                <a class="cmn-btn">Applied<i class='bx bx-plus'></i> </a>
+
+                            </div>
+                            <div *ngIf="!appliedjobs">
+                                <a class="cmn-btn" (click)="onApply()">Apply Now <i class='bx bx-plus'></i> </a>
+
+                            </div>
+
+
+                            <ul>
+                                <li><a routerLink="/job-details"><i class='bx bx-heart'></i> Save</a></li>
+                                <li><a routerLink="/job-details"><i class='bx bx-share-alt'></i> Share</a></li>
+                                <li><a routerLink="/job-details"><i class='bx bxs-report'></i> Report</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Title -->
+
+<!-- Job Details -->
+<div class="job-details-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="details-item">
+                    <div class="details-inner">
+                        <h3>Job Description</h3>
+                        <p>{{jobDetails.Jobdescription}}</p>
+                    </div>
+
+                    <div class="details-inner">
+                        <h3>Our Company</h3>
+                        <p>{{jobDetails.OurCompany}}</p>
+                    </div>
+
+                    <!-- <div class="details-inner">
+                        <h3>Previous Interview</h3>
+
+                        <div class="job-details-slider owl-theme owl-carousel">
+                            <div class="slider-item">
+                                <img src="assets/img/job-details1.jpg" alt="Details">
+
+                                <div class="video-wrap">
+                                    <a href="https://www.youtube.com/watch?v=07d2dXHYb94&t=88s" class="popup-youtube"><i class='bx bx-play'></i></a>
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <img src="assets/img/job-details2.jpg" alt="Details">
+
+                                <div class="video-wrap">
+                                    <a href="https://www.youtube.com/watch?v=07d2dXHYb94&t=88s" class="popup-youtube"><i class='bx bx-play'></i></a>
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <img src="assets/img/job-details3.jpg" alt="Details">
+
+                                <div class="video-wrap">
+                                    <a href="https://www.youtube.com/watch?v=07d2dXHYb94&t=88s" class="popup-youtube"><i class='bx bx-play'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="details-inner">
+                        <h3>Job Responsibilities</h3>
+
+                        <ul>
+                            <!-- <li>
+                                <i class='bx bx-message-square-check'></i>
+                                They want to know that you weren’t lying on your resume about responsibilities.
+                            </li>
+                            <li>
+                                <i class='bx bx-message-square-check'></i>
+                                They want to check if your job responsibilities overlap with the role on offer.
+                            </li>
+                            <li>
+                                <i class='bx bx-message-square-check'></i>
+                                They want to put you at ease. Let’s face it. It’s an easy question.
+                            </li>
+                            <li>
+                                <i class='bx bx-message-square-check'></i>
+                                They want you to expand on the points that you included in your resume.
+                            </li>
+
+                            <li>
+                                <i class='bx bx-message-square-check'></i>
+                                They want to put you at ease. Let’s face it. It’s an easy question.
+                            </li>
+                            <li>
+                                <i class='bx bx-message-square-check'></i>
+                                They want to check if your job responsibilities overlap with the role on offer.
+                            </li>-->
+                            <!-- <li>
+                                <i class='bx bx-message-square-check'></i>
+                                Want you to expand on the points that you included in your resume.
+                            </li>  -->
+                            {{jobDetails.Jobresponsibilities}}
+                        </ul>
+                    </div>
+
+                    <!-- <div class="details-inner">
+                        <h3>Job Responsibilities</h3>
+                        
+                        <ul>
+                            <li>
+                                <i class='bx bx-message-square-check'></i>
+                                Ability to work under pressure
+                            </li>
+                            <li>
+                                <i class='bx bx-message-square-check'></i>
+                                Enterprise and entrepreneurial skills
+                            </li>
+                            <li>
+                                <i class='bx bx-message-square-check'></i>
+                                Negotiation and persuasion
+                            </li>
+                            <li>
+                                <i class='bx bx-message-square-check'></i>
+                                Understand where the other person is coming from so that you can both get what
+                            </li>
+                        </ul>
+                    </div> -->
+
+                    <div class="details-inner">
+                        <h3>Our Mission</h3>
+                        <p>{{jobDetails.Ourmission}}</p>
+                    </div>
+
+                    <div class="details-inner">
+                        <h3>Our Vision</h3>
+                        <p>{{jobDetails.Ourvision}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <div class="widget-area">
+                    <div class="job widget-item">
+                        <h3>Find A Job</h3>
+
+                        <form>
+                            <label><i class="flaticon-send"></i></label>
+                            <input type="text" class="form-control" placeholder="Email address">
+                            <button type="submit" class="btn">Get Job Alert</button>
+                        </form>
+                    </div>
+
+                    <div class="information widget-item">
+                        <h3>Job Information</h3>
+
+                        <ul>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Salary</h4>
+                                <span>{{jobDetails.Salary}}</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Technology</h4>
+                                <span>{{jobDetails.Technology}}</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Location</h4>
+                                <span>{{jobDetails.Location}}</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Offered Salary</h4>
+                                <span>{{jobDetails.Salary}}/month</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Posted</h4>
+                                <span>{{ jobDetails.CreatedDate | DayAgo }}</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Experience</h4>
+                                <span>{{jobDetails.Experience}}</span>
+                            </li>
+                            <!-- <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Industry</h4>
+                                <span>Development</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Level</h4>
+                                <span>Employee</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Applied</h4>
+                                <span>01</span>
+                            </li> -->
+                        </ul>
+                    </div>
+
+                    <div class="owner">
+                        <div class="top">
+                            <img src="assets/img/home-one/job4.png" alt="Owner">
+                            <h3>Owner Info</h3>
+                            <i class="flaticon-send"></i>
+                            <span>{{jobDetails.Location}}</span>
+                        </div>
+
+                        <div class="information widget-item">
+                            <ul>
+                                <li>
+                                    <img src="assets/img/job-details-icon.png" alt="Details">
+                                    <h4>Company Name</h4>
+                                    <a >{{jobDetails.CompanyName}}</a>
+                                </li>
+                                <!-- <li>
+                                    <img src="assets/img/job-details-icon.png" alt="Details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:hello@alzo.com">{{jobDetails.CompanyEmail}}</a>
+                                </li> -->
+                                <li>
+                                    <img src="assets/img/job-details-icon.png" alt="Details">
+                                    <h4>Location</h4>
+                                    <a href="#" target="_blank">{{jobDetails.Location}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Job Details -->
+
+<!-- Job -->
+<!-- <div class="job-details-related pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <h2>Related Jobs</h2>
+        </div>
+
+        <div class="employer-item">
+            <a routerLink="/job-details">
+                <img src="assets/img/home-one/job1.png" alt="Employer">
+                <h3>Product Designer</h3>
+                <ul>
+                    <li><i class="flaticon-send"></i> Los Angeles, CS, USA</li>
+                    <li>5 months ago</li>
+                </ul>
+                <p>We are Looking for a skilled Ul/UX designer amet conscu adiing elitsed do eusmod tempor</p>
+                <span class="span-one">Accounting</span>
+                <span class="span-two">FULL TIME</span>
+            </a>
+        </div>
+
+        <div class="employer-item">
+            <a routerLink="/job-details">
+                <img src="assets/img/home-one/job2.png" alt="Employer">
+                <h3>Sr. Shopify Developer</h3>
+                <ul>
+                    <li><i class="flaticon-send"></i> Houston, TX, USA</li>
+                    <li>4 months ago</li>
+                </ul>
+                <p>Responsible for managing skilled Ul/UX designer amet conscu adiing elitsed do eusmod</p>
+                <span class="span-one">Accounting</span>
+                <span class="span-two two">FULL TIME</span>
+            </a>
+        </div>
+
+        <div class="employer-item">
+            <a routerLink="/job-details">
+                <img src="assets/img/home-one/job3.png" alt="Employer">
+                <h3>Tax Manager</h3>
+                <ul>
+                    <li><i class="flaticon-send"></i>Ho Chi Minh City, Vietnam</li>
+                    <li>6 months ago</li>
+                </ul>
+                <p>International collaborative a skilled Ul/UX designer amet conscu adiing elitsed do eusmod</p>
+                <span class="span-one two">Broardcasting</span>
+                <span class="span-two three">FREELANCER</span>
+            </a>
+        </div>
+    </div>
+</div> -->
+<!-- End Job -->
+
+<!-- Footer -->
+<app-footer-style-two></app-footer-style-two>
+<!-- End Footer -->
