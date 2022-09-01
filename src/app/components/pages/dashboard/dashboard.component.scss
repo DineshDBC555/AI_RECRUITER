@@ -1,45 +1,67 @@
-.button2 {background-color: #FE4A55;}
+.button2 {
+    background-color: #FE4A55;
+}
+
 .example-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-  }
-  
-  .example-full-width {
+}
+
+.example-full-width {
     width: 100%;
-  }
+}
 
 .blue-icon {
-  color: #221668;
+    color: #221668;
 }
+
 .red-icon {
-  color: #FE4A55;
+    color: #FE4A55;
 }
-.autocomplete-container{
-margin:5px !important;
-box-shadow: none !important;
+
+.autocomplete-container {
+    margin: 5px !important;
+    box-shadow: none !important;
 }
+
 .employer-item {
-       border: none !important; 
-    box-shadow: none  !important;
+    border: red;
+    box-shadow: none !important;
+    border: 1px dashed #fe4a55;
 }
+
 .d-table {
-  width:125%;
-}
-.ptb-100{
-  padding-bottom: 0px;
+    width: 100%;
 }
 
-
-  
-
-
-.banner-content.three{
-  height:300px;
-  max-width:800px;
-  padding-top: 95px;
+.ptb-100 {
+    padding-top: 14%;
 }
-.autocomplete-container{
-margin:5px !important;
-box-shadow: none !important;
+
+.banner-content.three {
+    height: 300px;
+    max-width: 800px;
+    padding-top: 95px;
 }
+
+.autocomplete-container {
+    margin: 5px !important;
+    box-shadow: none !important;
+}
+
+.banner-form-area {
+    top: 50%;
+    left: 25%;
+}
+
+.mat-typography {
+    overflow-x: hidden;
+}
+
+// .d-table-cell {
+//     vertical-align: middle;
+// }
+// .d-table-cell {
+//     display: table-cell!important;
+// }

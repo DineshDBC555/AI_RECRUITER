@@ -6,7 +6,7 @@ var model = function() {
 }
 
 model.getvalue = function(err, result) {
-    sql.query("SELECT * FROM job", err, function(err, res) {
+    sql.query("SELECT job.*,companydetails.Logo FROM job JOIN companydetails ON job.Companyid = companydetails.Id;", err, function(err, res) {
         // SELECT DISTINCT(`Technology`) as tech FROM job;
         if (res) {
             result(null, {
@@ -191,26 +191,26 @@ model.filtervalue = function(filter, result) {
 };
 model.getdateposted = function(Date, err, result) {
 
-    console.log("SELECT * FROM job WHERE CreatedDate BETWEEN " + "'" + Date + "'" + " AND CURRENT_DATE;")
-    sql.query("SELECT * FROM job WHERE CreatedDate BETWEEN " + "'" + Date + "'" + " AND CURRENT_DATE; ", err, function(err, res) {
+        console.log("SELECT * FROM job WHERE CreatedDate BETWEEN " + "'" + Date + "'" + " AND CURRENT_DATE;")
+        sql.query("SELECT * FROM job WHERE CreatedDate BETWEEN " + "'" + Date + "'" + " AND CURRENT_DATE; ", err, function(err, res) {
 
-        if (res) {
-            result(null, {
-                "flag": 1,
-                "message": "Success",
-                "data": res
-            });
-        } else {
-            result(null, {
-                "flag": 0,
-                "message": err,
-                "data": []
-            });
-        }
-    })
+            if (res) {
+                result(null, {
+                    "flag": 1,
+                    "message": "Success",
+                    "data": res
+                });
+            } else {
+                result(null, {
+                    "flag": 0,
+                    "message": err,
+                    "data": []
+                });
+            }
+        })
 
-}
-// model.getJobdata = function(id, UserId, err, result) {
+    }
+    // model.getJobdata = function(id, UserId, err, result) {
 
 //     sql.query("SELECT job.*,companydetails.*,(SELECT UserId FROM `appliedjobs` WHERE UserId=" + UserId + " AND " + id + " LIMIT 1) as Isapplied FROM job INNER JOIN companydetails ON companydetails.JobId=job.Id WHERE job.Id=" + id + ";", err, function(err, res) {
 //         if (res) {
@@ -228,44 +228,43 @@ model.getdateposted = function(Date, err, result) {
 //         }
 //     })
 
-    // sql.query("SELECT job.*,companydetails.*,(SELECT UserId FROM `appliedjobs` WHERE UserId=" + UserId + " AND `JobId`=" + id + " LIMIT 1) as Isapplied FROM job INNER JOIN companydetails ON companydetails.JobId=job.Id WHERE job.Id=" + id + ";", err, function(err, res) {
-    //     console.log("SELECT job.*,companydetails.*,(SELECT UserId FROM `appliedjobs` WHERE UserId=" + UserId + " AND `JobId`=" + id + " LIMIT 1) as Isapplied FROM job INNER JOIN companydetails ON companydetails.JobId=job.Id WHERE job.Id=" + id + ";");
-    //     if (res) {
-    //         result(null, {
-    //             "flag": 1,
-    //             "message": "Success",
-    //             "data": res
-    //         });
-    //     } else {
-    //         result(null, {
-    //             "flag": 0,
-    //             "message": err,
-    //             "data": []
-    //         });
-    //     }
-    // })
+// sql.query("SELECT job.*,companydetails.*,(SELECT UserId FROM `appliedjobs` WHERE UserId=" + UserId + " AND `JobId`=" + id + " LIMIT 1) as Isapplied FROM job INNER JOIN companydetails ON companydetails.JobId=job.Id WHERE job.Id=" + id + ";", err, function(err, res) {
+//     console.log("SELECT job.*,companydetails.*,(SELECT UserId FROM `appliedjobs` WHERE UserId=" + UserId + " AND `JobId`=" + id + " LIMIT 1) as Isapplied FROM job INNER JOIN companydetails ON companydetails.JobId=job.Id WHERE job.Id=" + id + ";");
+//     if (res) {
+//         result(null, {
+//             "flag": 1,
+//             "message": "Success",
+//             "data": res
+//         });
+//     } else {
+//         result(null, {
+//             "flag": 0,
+//             "message": err,
+//             "data": []
+//         });
+//     }
+// })
 
 // }
-model.getJobdata = function( JobId,UserId, err, result) {
+model.getJobdata = function(JobId, UserId, err, result) {
     // SELECT companydetails.*, job.*,appliedjobs.* FROM companydetails LEFT JOIN job ON companydetails.Id=job.Companyid LEFT JOIN appliedjobs ON job.id = appliedjobs.JobId WHERE appliedjobs.UserId=149;
-        sql.query("SELECT companydetails.*, job.* ,(SELECT UserId FROM `appliedjobs` WHERE UserId=" + UserId + " AND appliedjobs.JobId=job.id LIMIT 1) as Isapplied FROM companydetails LEFT JOIN job ON companydetails.Id=job.Companyid WHERE  job.id = "+JobId+";"
-        , err, function(err, res) {
-            if (res) {
-                result(null, {
-                    "flag": 1,
-                    "message": "Success",
-                    "data": res
-                });
-            } else {
-                result(null, {
-                    "flag": 0,
-                    "message": err,
-                    "data": []
-                });
-            }
-        })
-    
-    }
+    sql.query("SELECT companydetails.*, job.* ,(SELECT UserId FROM `appliedjobs` WHERE UserId=" + UserId + " AND appliedjobs.JobId=job.id LIMIT 1) as Isapplied FROM companydetails LEFT JOIN job ON companydetails.Id=job.Companyid WHERE  job.id = " + JobId + ";", err, function(err, res) {
+        if (res) {
+            result(null, {
+                "flag": 1,
+                "message": "Success",
+                "data": res
+            });
+        } else {
+            result(null, {
+                "flag": 0,
+                "message": err,
+                "data": []
+            });
+        }
+    })
+
+}
 model.UserAppliedJobs = function(job, result) {
     var query = "";
     query += "Insert into appliedjobs (UserId, JobId, CreatedBy, CreatedDate) values('" + job.UserId + "','" + job.JobId + "','" + job.CreatedBy + "',CURRENT_TIMESTAMP());";

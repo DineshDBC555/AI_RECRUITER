@@ -99,9 +99,9 @@ export class DashboardService {
     return this.http.get(this.experienceUrl)
   }
 
-  saveFormDetails(data: any) {
+  saveFormDetails(data: userdata):Observable<userdata> {
     console.log([data])
-    return this.http.post(this.Formurl, [data])
+    return this.http.post<userdata>(this.Formurl, [data])
   }
 
   saveUserDetails(data: any) {

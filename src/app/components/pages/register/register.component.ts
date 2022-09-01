@@ -53,10 +53,10 @@ export class RegisterComponent implements OnInit {
   }
  
   onFormSubmit() {
-    // this.submitted = true;
-    // if (this.userForm.invalid) {
-    //   return;
-    // }
+    this.submitted = true;
+    if (this.userForm.invalid) {
+      return;
+    }
     
     // this.value={
     //   Name:"",

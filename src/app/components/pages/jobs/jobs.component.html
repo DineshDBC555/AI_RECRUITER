@@ -48,10 +48,12 @@
                         </form>	 -->
                     </li>
                 </ul>
+
                 <div *ngFor="let title of data">
                     <div class="employer-item">
                         <a (click)="clickJobdetails(title.Id)">
-                            <img src="assets/img/home-one/job2.png" alt="Employer">
+                            <img src="{{title.Logo}}" alt="Employer" style="
+                            width: 74px;">
                             <h3>{{title.Name}}</h3>
                             <ul>
                                 <li><i class="flaticon-send"></i> {{title.Location}}</li>

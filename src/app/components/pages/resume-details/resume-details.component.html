@@ -1,9 +1,9 @@
 <!-- Navbar -->
-<app-navbar-style-three></app-navbar-style-three>
+<!-- <app-navbar-style-three></app-navbar-style-three> -->
 <!-- End Navbar -->
 
 <!-- Page Title -->
-<div class="page-title-area">
+<!-- <div class="page-title-area">
     <div class="d-table">
         <div class="d-table-cell">
             <div class="container">
@@ -21,11 +21,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- End Page Title -->
 
 <!-- Resume -->
-<div class="person-details-area resume-area ptb-100">
+<!-- <div class="person-details-area resume-area ptb-100">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-12">
@@ -176,9 +176,252 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- End Resume -->
 
 <!-- Footer -->
-<app-footer-style-two></app-footer-style-two>
+<!-- <app-footer-style-two></app-footer-style-two> -->
 <!-- End Footer -->
+<!-- Navbar -->
+<app-navbar-style-three></app-navbar-style-three>
+<!-- End Navbar -->
+
+<!-- Page Title -->
+<div class="page-title-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="title-item">
+                    <h2>Single Resume</h2>
+                    <ul>
+                        <li>
+                            <img src="assets/img/home-three/title-img-two.png" alt="Image">
+                            <a routerLink="/">Home</a>
+                        </li>
+                        <li><span>/</span></li>
+                        <li>Single Resume</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Title -->
+
+<!-- Resume -->
+<div class="person-details-area resume-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="widget-area">
+                    <div class="resume-profile" *ngFor="let data of profileArray">
+                        <img src="assets/img/dashboard1.jpg" alt="Dashboard">
+                        <h2>{{data.Name}}</h2>
+                        <span>{{data.Position}}</span>
+                    </div>
+
+                    <div class="information widget-item">
+                        <h3>Overview</h3>
+                        <ul>
+                            <li *ngFor="let data of profileArray">
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Salary:</h4>
+                                <span>{{data.Salary}}</span>
+                            </li>
+                            <li *ngFor="let data of experienceArray">
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Experience:</h4>
+                                <span>{{diff}} years {{diff2}} Month</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Age:</h4>
+                                <span>30-35</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Gender:</h4>
+                                <span>Male</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Languages:</h4>
+                                <span>Bangla, English, Arabic, Spanish</span>
+                            </li>
+                            <li>
+                                <img src="assets/img/job-details-icon.png" alt="Details">
+                                <h4>Qualification:</h4>
+                                <span>Certificate, Associate Degree</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-12">
+                <div class="details-item">
+                    <div class="profile">
+                        <h3>About</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book.</p>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                            to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search.</p>
+                    </div>
+
+                    <div class="work bottom-item" *ngFor="let data of experienceArray">
+                        <h3>Work Experience</h3>
+                        <ul>
+                            <li>
+                                <img src="assets/img/home-three/title-img.png" alt="Icon"> {{data.CompanyName}}, {{data.Location}}, {{start | date:'MM/yyyy'}} - {{end | date:'MM/yyyy'}}
+                            </li>
+                            <!-- <li><span>{{start | dateDifference }} -{{end | dateDifference}} </span></li> -->
+                        </ul>
+                        <h4>{{data.Position}}</h4>
+                        <p>{{data.Description}}.</p>
+                    </div>
+
+                    <!-- <div class="work bottom-item bottom-item-last">
+                        <ul>
+                            <li>
+                                <img src="assets/img/home-three/title-img.png" alt="Icon">
+                                3s Software Bangladesh
+                            </li>
+                            <li><span>02/2015 - 02/2018</span></li>
+                        </ul>
+                        <h4>John Hopkins, Bangladesh</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    </div> -->
+
+                    <div class="work bottom-item">
+                        <h3>Education</h3>
+                        <ng-container *ngFor="let data of educationArray">
+                            <ul>
+                                <li>
+                                    <img src="assets/img/home-three/title-img.png" alt="Icon"> {{data.Institute}}{{data.Location}}
+                                </li>
+                            </ul>
+                            <h4>{{data.Degree}} ({{data.Year}})</h4>
+                            <p>{{data.Description}}</p>
+                        </ng-container>
+                        <!-- {{educationArray[0].Institute}} -->
+                        <!-- <ng-container *ngFor="let data of educationArray">
+                            <ul>
+                                <li>
+                                    <img src="assets/img/home-three/title-img.png" alt="Icon">
+                                    Path Technologies, Washington, DC, USA
+                                </li>
+                            </ul>
+                            <h4>MBA (2018-2019)</h4>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
+                                 you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>   
+                        </ng-container> -->
+                        <!-- <ul>
+                            <li>
+                                <img src="assets/img/home-three/title-img.png" alt="Icon">
+                                Path Technologies, Washington, DC, USA
+                            </li>
+                        </ul> -->
+                        <!-- <h4>MBA (2018-2019)</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p> -->
+                    </div>
+
+                    <!-- <div class="work bottom-item bottom-item-last">
+                        <ul>
+                            <li>
+                                <img src="assets/img/home-three/title-img.png" alt="Icon">
+                                Design at Institute of Technology & Marketing
+                            </li>
+                        </ul>
+                        <h4>Section UX & UI design (2014 - 2018)</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    </div> -->
+
+                    <div class="skills">
+                        <h3>Skills</h3>
+
+
+                        <!-- <div class="skill-wrap">
+                            <div class="skill">
+                                <h3>HTML/CSS</h3>
+                                <div class="skill-bar skill1 animate_slideInLeft animate_animated">
+                                    <span class="skill-count1">56%</span>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <h3>WORDPRESS</h3>
+                                <div class="skill-bar skill2 animate_slideInLeft animate_animated">
+                                    <span class="skill-count2">80%</span>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <h3>PHOTOSHOP</h3>
+                                <div class="skill-bar skill3 animate_slideInLeft animate_animated">
+                                    <span class="skill-count3">90%</span>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <h3>PHP</h3>
+                                <div class="skill-bar skill4 animate_slideInLeft animate_animated">
+                                    <span class="skill-count4">70%</span>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <h3>TEAM MANAGEMENT</h3>
+                                <div class="skill-bar skill5 animate_slideInLeft animate_animated">
+                                    <span class="skill-count5">80%</span>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <h3>SERVICE OF QUALITY</h3>
+                                <div class="skill-bar skill6 animate_slideInLeft animate_animated">
+                                    <span class="skill-count6">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                        <div class="details-inner">
+                            <h3>Job Description</h3>
+
+                            <ul *ngFor="let data of experienceArray">
+                                <li>
+                                    <i class='bx bx-message-square-check'></i> {{data.Skills}}
+                                </li>
+                                <!-- <li>
+                            <i class='bx bx-message-square-check'></i>
+                            They want to check if your job responsibilities overlap with the role on offer.
+                        </li>
+                        <li>
+                            <i class='bx bx-message-square-check'></i>
+                            They want to put you at ease. Let’s face it. It’s an easy question.
+                        </li>
+                        <li>
+                            <i class='bx bx-message-square-check'></i>
+                            They want you to expand on the points that you included in your resume.
+                        </li>
+
+                        <li>
+                            <i class='bx bx-message-square-check'></i>
+                            They want to put you at ease. Let’s face it. It’s an easy question.
+                        </li>
+                        <li>
+                            <i class='bx bx-message-square-check'></i>
+                            They want to check if your job responsibilities overlap with the role on offer.
+                        </li>-->
+                                <!-- <li>
+                            <i class='bx bx-message-square-check'></i>
+                            Want you to expand on the points that you included in your resume.
+                        </li>  -->
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Resume -->
+
+        <!-- Footer -->
+        <app-footer-style-two></app-footer-style-two>
+        <!-- End Footer -->

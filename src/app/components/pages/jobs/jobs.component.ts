@@ -58,10 +58,10 @@ export class JobsComponent implements OnInit {
       this.data = result.data;
       console.log(this.data)
     });
-    this.jobdetails.getFormDetails().subscribe((result) => {
-      this.data = result.data;
-      console.log(this.data)
-    });
+    // this.jobdetails.getFormDetails().subscribe((result) => {
+    //   this.data = result.data;
+    //   console.log(this.data)
+    // });
     this.jobdetails.getFilterExperienceDetails().subscribe((result) => {
       this.ExperienceDetails=result.data;
       console.log(this.ExperienceDetails)

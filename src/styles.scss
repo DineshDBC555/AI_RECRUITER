@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@ng-select/ng-select/themes/default.theme.css";
 
-$heading-font: 'Quicksand', sans-serif;
-$common-font: 'Poppins', sans-serif;
+@import "~@ng-select/ng-select/themes/default.theme.css";
+$heading-font: 'Quicksand',
+sans-serif;
+$common-font: 'Poppins',
+sans-serif;
 $all-size: 15px;
 $transition: .5s all ease;
 $blue-color: #221668;
@@ -12,68 +14,90 @@ $white-color: #fff;
 $green-color: #21a212;
 
 /*----- Default CSS -----*/
+
 body {
     font-family: $common-font;
     color: $grey-color;
     background-color: $white-color;
     font-size: $all-size;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $heading-font;
     line-height: 1.4;
     font-weight: 700;
 }
+
 p {
     line-height: 1.8;
 }
+
 a {
     transition: $transition;
     text-decoration: none;
-
     &:hover {
         text-decoration: none;
     }
 }
+
 img {
     max-width: 100%;
 }
+
 .d-table {
     width: 100%;
     height: 100%;
 }
-.d-table-cell {
-    vertical-align: middle;
-}
+
+// .d-table-cell {
+//     vertical-align: middle;
+// }
 .ptb-100 {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .pt-100 {
     padding-top: 100px;
 }
+
 .pb-70 {
     padding-bottom: 70px;
 }
+
 .pb-100 {
     padding-bottom: 100px;
 }
+
 button {
-    &:focus{
+    &:focus {
         outline: 0;
     }
 }
-.btn.focus, .btn:focus {
+
+.btn.focus,
+.btn:focus {
     box-shadow: none;
 }
+
+
 /*----- End Default CSS -----*/
 
+
 /*----- Home Demo One CSS -----*/
+
+
 /*-- Navbar --*/
+
 .main-nav {
     background: transparent;
     padding-top: 30px;
     transition: $transition;
-
     .container-fluid {
         padding-left: 50px;
         padding-right: 50px;
@@ -81,14 +105,11 @@ button {
     nav {
         padding-left: 0;
         padding-right: 0;
-
         .navbar-nav {
             margin-left: auto;
             margin-right: auto;
-
             .nav-item {
                 position: relative;
-
                 &:hover {
                     .dropdown-menu {
                         transform: rotateX(0deg);
@@ -102,8 +123,9 @@ button {
                 a {
                     color: $blue-color;
                     text-transform: capitalize;
-
-                    &:hover, &:focus, &.active {
+                    &:hover,
+                    &:focus,
+                    &.active {
                         color: $pink-color;
                     }
                 }
@@ -111,7 +133,6 @@ button {
                     background: $blue-color;
                     padding: 0;
                     transform: rotateX(-45deg);
-
                     li {
                         &:hover {
                             .dropdown-menu {
@@ -121,9 +142,8 @@ button {
                                 color: $pink-color;
                             }
                         }
-                        a {                                
+                        a {
                             position: relative;
-
                             &:before {
                                 position: absolute;
                                 content: '';
@@ -136,10 +156,11 @@ button {
                                 opacity: 0;
                                 border-radius: 0 10px 10px 0;
                             }
-                            &:hover, &:focus, &.active {
+                            &:hover,
+                            &:focus,
+                            &.active {
                                 color: $pink-color;
                                 padding-left: 10px;
-
                                 &:before {
                                     width: 3px;
                                     opacity: 1;
@@ -149,10 +170,11 @@ button {
                         .dropdown-menu {
                             left: unset;
                             right: -100%;
-
                             li {
                                 a {
-                                    &:hover, &:focus, &.active {
+                                    &:hover,
+                                    &:focus,
+                                    &.active {
                                         color: $pink-color;
                                     }
                                 }
@@ -184,7 +206,6 @@ button {
         border-radius: 4px;
         transition: $transition;
         visibility: visible;
-
         &:before {
             position: absolute;
             content: '';
@@ -195,7 +216,6 @@ button {
         }
         &.two {
             background-color: $blue-color;
-
             &:before {
                 border-top: 7px solid $blue-color;
             }
@@ -206,13 +226,13 @@ button {
         padding-top: 5px;
         padding-bottom: 5px;
         box-shadow: 0px 0px 20px 0px #ded8ff;
-
         .tooltip-span {
             opacity: 0;
             visibility: hidden;
         }
     }
 }
+
 .side-nav {
     a {
         display: inline-block;
@@ -220,7 +240,6 @@ button {
     .login-left {
         color: $blue-color;
         margin-right: 30px;
-
         i {
             display: inline-block;
             color: $blue-color;
@@ -243,7 +262,6 @@ button {
         padding-right: 65px;
         border-radius: 5px;
         line-height: 50px;
-
         i {
             display: inline-block;
             height: 50px;
@@ -263,13 +281,16 @@ button {
         }
     }
 }
+
+
 /*-- End Navbar --*/
 
+
 /*-- Banner --*/
+
 .banner-area {
     background-color: #f8e8e9;
     position: relative;
-
     &:before {
         position: absolute;
         content: '';
@@ -282,11 +303,9 @@ button {
     .container-fluid {
         padding-left: 50px;
         padding-right: 0;
-
         .row {
             margin-left: 0;
             margin-right: 0;
-            
             .col-lg-8 {
                 padding-left: 0;
                 padding-right: 0;
@@ -297,26 +316,24 @@ button {
             }
         }
     }
-    .banner-shape {            
+    .banner-shape {
         position: absolute;
         bottom: 0;
         left: 0;
-
         img {
             width: 100%;
             height: 100px;
         }
     }
 }
+
 .banner-content {
     height: 1070px;
-
     h1 {
         color: $blue-color;
         font-size: 70px;
         margin-bottom: 25px;
         max-width: 710px;
-
         span {
             color: $pink-color;
         }
@@ -336,7 +353,6 @@ button {
         position: relative;
         max-width: 925px;
         margin-bottom: 40px;
-
         .col-lg-4 {
             padding-left: 15px !important;
             padding-right: 15px !important;
@@ -344,7 +360,6 @@ button {
         .form-group {
             margin-bottom: 0;
             position: relative;
-
             &.two {
                 .form-control {
                     border-right: 0;
@@ -365,12 +380,11 @@ button {
                 padding-left: 30px;
                 border-right: 1px solid #eeeeee !important;
                 border-radius: 0;
-
                 &:focus {
                     box-shadow: none;
                 }
             }
-            ::placeholder {
+             ::placeholder {
                 color: $grey-color;
             }
             .nice-select {
@@ -383,7 +397,6 @@ button {
                 padding-left: 0;
                 border-radius: 0;
                 border-right: 1px solid #eeeeee !important;
-
                 &:after {
                     right: 35px;
                 }
@@ -407,7 +420,6 @@ button {
             position: absolute;
             top: 10px;
             right: 15px;
-
             i {
                 display: inline-block;
                 height: 50px;
@@ -431,11 +443,9 @@ button {
         ul {
             margin: 0;
             padding: 0;
-    
             li {
                 list-style-type: none;
                 display: inline-block;
-    
                 span {
                     display: block;
                     color: $blue-color;
@@ -448,7 +458,6 @@ button {
                     display: block;
                     color: $pink-color;
                     margin-right: 5px;
-    
                     &:hover {
                         color: $blue-color;
                     }
@@ -462,12 +471,11 @@ button {
         }
     }
 }
+
 .banner-img {
     position: relative;
-
     img {
         position: absolute;
-
         &:nth-child(1) {
             top: 140px;
             right: 0;
@@ -483,7 +491,7 @@ button {
             right: 175px;
             max-width: 120px;
         }
-        &:nth-child(4){
+        &:nth-child(4) {
             top: 360px;
             right: 305px;
             animation: banner-ani-one 3s infinite linear;
@@ -539,7 +547,6 @@ button {
         position: absolute;
         top: 55px;
         right: 380px;
-
         p {
             display: inline-block;
             color: #fff;
@@ -547,11 +554,10 @@ button {
             max-width: 300px;
             position: absolute;
             left: -410px;
-            top: 85px;    
+            top: 85px;
             padding: 25px 25px 25px;
             margin-bottom: 0;
             border-radius: 30px 30px 0 0;
-    
             &:before {
                 position: absolute;
                 content: '';
@@ -563,6 +569,7 @@ button {
         }
     }
 }
+
 @keyframes banner-ani-one {
     0% {
         opacity: 1;
@@ -574,6 +581,7 @@ button {
         opacity: 1;
     }
 }
+
 @keyframes banner-ani-two {
     0% {
         opacity: 0.10;
@@ -585,6 +593,7 @@ button {
         opacity: 0.10;
     }
 }
+
 @keyframes banner-ani-three {
     0% {
         transform: rotateY(0deg);
@@ -596,6 +605,7 @@ button {
         transform: rotateY(360deg);
     }
 }
+
 @keyframes banner-ani-four {
     0% {
         transform: rotateY(0deg);
@@ -607,8 +617,10 @@ button {
         transform: rotateY(-360deg);
     }
 }
+
 @keyframes border-transform-default {
-    0%, to {
+    0%,
+    to {
         border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
     }
     14% {
@@ -630,22 +642,24 @@ button {
         border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
     }
 }
+
+
 /*-- End Banner --*/
 
+
 /*-- Work --*/
+
 .section-title {
     margin-bottom: 50px;
     position: relative;
     z-index: 1;
     margin-top: 2px;
-
     .sub-title {
         display: inline-block;
         color: $blue-color;
         position: relative;
         padding-left: 10px;
         z-index: 1;
-
         &:before {
             position: absolute;
             content: '';
@@ -664,6 +678,7 @@ button {
         margin-bottom: 0;
     }
 }
+
 .work-item {
     margin-bottom: 30px;
     position: relative;
@@ -672,7 +687,6 @@ button {
     padding: 30px 30px 28px;
     border-radius: 5px;
     transition: $transition;
-
     &:before {
         position: absolute;
         content: '';
@@ -688,7 +702,6 @@ button {
     }
     &:hover {
         transform: translate(0px, -10px);
-
         &:before {
             opacity: 1;
             height: 100%;
@@ -729,19 +742,22 @@ button {
         transition: $transition;
     }
 }
+
+
 /*-- End Work --*/
 
+
 /*-- Jobs --*/
+
 #container .mix {
     display: none;
 }
+
 .sorting-menu {
     text-align: right;
-
     ul {
         margin: 0;
         padding: 0;
-
         li {
             list-style-type: none;
             display: inline-block;
@@ -750,30 +766,28 @@ button {
             transition: $transition;
             cursor: pointer;
             margin-right: 30px;
-
             &:last-child {
                 margin-right: 0;
             }
-            &:hover, &.active {
+            &:hover,
+            &.active {
                 color: $pink-color;
             }
         }
     }
 }
+
 .job-browse {
     text-align: center;
-
     p {
         margin-bottom: 0;
         font-size: 17px;
         color: #7068a3;
-
         a {
             display: inline-block;
             color: $pink-color;
             font-weight: 500;
             border-bottom: 1px solid $pink-color;
-
             &:hover {
                 color: $blue-color;
                 border-bottom: 1px solid $blue-color;
@@ -781,6 +795,7 @@ button {
         }
     }
 }
+
 .job-item {
     padding: 25px 35px 30px;
     border: 1px solid #eeeeee;
@@ -788,7 +803,6 @@ button {
     transition: $transition;
     margin-bottom: 30px;
     background-color: $white-color;
-
     &:hover {
         border-color: $pink-color;
         background-color: #f8e8e9;
@@ -796,7 +810,6 @@ button {
     .job-left {
         position: relative;
         padding-left: 100px;
-
         img {
             position: absolute;
             top: 8px;
@@ -806,7 +819,6 @@ button {
             font-size: 20px;
             margin-bottom: 3px;
             color: $blue-color;
-
         }
         p {
             margin-bottom: 12px;
@@ -815,13 +827,11 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: inline-block;
                 color: $pink-color;
                 margin-right: 7px;
-
                 i {
                     display: inline-block;
                     font-size: 16px;
@@ -832,7 +842,6 @@ button {
                 }
                 &:nth-child(4) {
                     color: #7068a3;
-
                     i {
                         font-size: 18px;
                         position: relative;
@@ -847,13 +856,11 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: block;
                 color: #7068a3;
                 margin-bottom: 5px;
-
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -874,11 +881,11 @@ button {
         }
     }
 }
+
 .feature-top-right {
     position: absolute;
     top: -1px;
     right: -1px;
-
     span {
         display: inline-block;
         color: $white-color;
@@ -887,16 +894,19 @@ button {
         font-size: 12px;
     }
 }
+
+
 /*-- End Jobs --*/
 
+
 /*-- Explore --*/
+
 .explore-area {
     background-image: url('assets/img/home-one/explore-bg.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
-
     &:before {
         position: absolute;
         content: '';
@@ -911,10 +921,8 @@ button {
         position: relative;
         max-width: 590px;
         margin-left: auto;
-
         .section-title {
             margin-bottom: 25px;
-
             .sub-title {
                 color: $white-color;
             }
@@ -929,11 +937,9 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: inline-block;
-
                 .left-btn {
                     background-color: $white-color;
                     color: $blue-color;
@@ -947,7 +953,6 @@ button {
                     display: inline-block;
                     position: relative;
                     margin-right: 20px;
-            
                     i {
                         display: inline-block;
                         height: 50px;
@@ -983,7 +988,6 @@ button {
                     display: inline-block;
                     position: relative;
                     top: 4px;
-
                     i {
                         line-height: 40px;
                     }
@@ -996,14 +1000,17 @@ button {
         }
     }
 }
+
+
 /*-- End Explore --*/
 
+
 /*-- Counter --*/
+
 .counter-area {
     background-color: #f8e8e9;
     position: relative;
     padding-bottom: 170px;
-
     &:before {
         position: absolute;
         content: '';
@@ -1018,18 +1025,17 @@ button {
         bottom: 0;
         left: 0;
         transform: rotateY(180deg);
-
         img {
             height: 100px;
             width: 100%;
         }
     }
 }
+
 .counter-item {
     margin-bottom: 30px;
     position: relative;
     padding-left: 95px;
-
     i {
         display: inline-block;
         position: absolute;
@@ -1054,18 +1060,20 @@ button {
         color: $blue-color;
     }
 }
+
+
 /*-- End Counter --*/
 
+
 /*-- Company --*/
+
 .cmn-link {
     text-align: right;
-
     a {
         display: inline-block;
         color: $pink-color;
         font-size: 17px;
         position: relative;
-
         i {
             display: inline-block;
             font-size: 30px;
@@ -1079,7 +1087,7 @@ button {
             left: -42px;
             opacity: 1;
         }
-        .two {      
+        .two {
             position: absolute;
             top: -2px;
             right: -5px;
@@ -1088,7 +1096,6 @@ button {
         }
         &:hover {
             padding-right: 42px;
-
             .one {
                 opacity: 0;
             }
@@ -1099,16 +1106,15 @@ button {
         }
     }
 }
+
 .company-item {
     margin-bottom: 30px;
     border: 1px dashed #636363;
     padding: 25px 20px 25px;
     transition: $transition;
     position: relative;
-
     &:hover {
         transform: translate(0, -10px);
-
         .top {
             a {
                 img {
@@ -1125,10 +1131,8 @@ button {
     }
     .top {
         margin-bottom: 18px;
-
         a {
             display: block;
-
             img {
                 margin-bottom: 25px;
                 transition: $transition;
@@ -1139,11 +1143,9 @@ button {
             font-size: 20px;
             margin-bottom: 8px;
             display: inline-block;
-
             a {
                 color: $blue-color;
                 display: inline-block;
-
                 &:hover {
                     color: $pink-color;
                 }
@@ -1164,7 +1166,6 @@ button {
             color: #615798;
             margin-bottom: 0;
             font-size: 13px;
-
             i {
                 display: inline-block;
                 font-size: 14px;
@@ -1174,12 +1175,10 @@ button {
     }
     .bottom {
         position: relative;
-
         ul {
             margin: 0;
             padding: 0;
             margin-bottom: 30px;
-
             li {
                 list-style-type: none;
                 display: inline-block;
@@ -1190,7 +1189,6 @@ button {
                 padding: 6px 12px;
                 margin-bottom: 10px;
                 margin-right: 15px;
-
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -1217,9 +1215,13 @@ button {
         }
     }
 }
+
+
 /*-- End Company --*/
 
+
 /*-- Location --*/
+
 .location-area {
     .owl-prev {
         position: absolute;
@@ -1230,11 +1232,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $pink-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: #fff;
             }
@@ -1261,11 +1261,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $pink-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: #fff;
             }
@@ -1296,6 +1294,7 @@ button {
         }
     }
 }
+
 .location-item {
     background-color: #f9f9f9;
     border-radius: 5px;
@@ -1304,7 +1303,6 @@ button {
     position: relative;
     margin-bottom: 30px;
     z-index: 1;
-
     &:hover {
         .top {
             a {
@@ -1317,11 +1315,9 @@ button {
         border-radius: 5px;
         position: relative;
         z-index: 2;
-
         a {
             display: block;
-            position: relative;    
-
+            position: relative;
             &:after {
                 position: absolute;
                 content: '';
@@ -1329,10 +1325,9 @@ button {
                 height: 100%;
                 left: 0;
                 bottom: 0;
-                background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+                background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
                 opacity: .60;
             }
-    
             img {
                 width: 100%;
                 transition: $transition;
@@ -1357,25 +1352,26 @@ button {
         bottom: 25px;
         margin-bottom: 0;
         z-index: 2;
-
         a {
             color: $white-color;
             display: block;
-
             &:hover {
                 color: $pink-color;
             }
         }
     }
 }
+
+
 /*-- End Location --*/
 
+
 /*-- Feedback --*/
+
 .feedback-area {
     background-color: #f8e8e9;
     position: relative;
     padding-bottom: 150px;
-
     &:before {
         position: absolute;
         content: '';
@@ -1390,7 +1386,6 @@ button {
         bottom: 0;
         left: 0;
         right: 0;
-
         img {
             width: 100%;
             height: 100px;
@@ -1398,7 +1393,6 @@ button {
     }
     .section-title {
         text-align: center;
-
         .sub-title {
             display: inline-block;
         }
@@ -1412,7 +1406,6 @@ button {
         margin-right: 15px;
         margin-bottom: 30px;
         box-shadow: 0px 0px 20px 0px #dddddd24;
-
         &:hover {
             img {
                 right: 5px;
@@ -1437,7 +1430,6 @@ button {
             font-size: 24px;
             color: $blue-color;
             margin-bottom: 0;
-
             i {
                 display: inline-block;
                 color: $blue-color;
@@ -1464,11 +1456,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $pink-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: #fff;
             }
@@ -1495,11 +1485,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $pink-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: #fff;
             }
@@ -1530,9 +1518,13 @@ button {
         }
     }
 }
+
+
 /*-- End Feedback --*/
 
+
 /*-- Blog --*/
+
 .blog-item {
     margin-bottom: 30px;
     border: 1px dashed #c4c4c4;
@@ -1540,11 +1532,9 @@ button {
     padding: 15px 15px 25px 15px;
     overflow: hidden;
     transition: $transition;
-
     &:hover {
         transform: translate(0, -10px);
         box-shadow: 0px 0px 20px 0px #dddddd24;
-        
         .top {
             a {
                 img {
@@ -1557,10 +1547,8 @@ button {
         overflow: hidden;
         margin-bottom: 20px;
         border-radius: 5px;
-
         a {
             display: block;
-
             img {
                 width: 100%;
                 transition: $transition;
@@ -1572,7 +1560,6 @@ button {
         padding-left: 40px;
         margin-bottom: 20px;
         position: relative;
-
         &:before {
             position: absolute;
             content: '';
@@ -1586,10 +1573,8 @@ button {
     h3 {
         font-size: 20px;
         margin-bottom: 20px;
-
         a {
             color: $blue-color;
-
             &:hover {
                 color: $pink-color;
             }
@@ -1598,17 +1583,14 @@ button {
     .cmn-link {
         text-align: left;
         margin-left: 45px;
-
         a {
             color: $grey-color;
-
             i {
                 color: $grey-color;
             }
             &:hover {
                 margin-left: -45px;
                 color: $pink-color;
-
                 .one {
                     left: -60px;
                 }
@@ -1619,19 +1601,21 @@ button {
         }
     }
 }
+
+
 /*-- End Blog --*/
 
+
 /*-- Partner --*/
+
 .partner-area {
     background-color: #f8e8e9;
     position: relative;
-
     .partner-shape {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-
         img {
             height: 100px;
             width: 100%;
@@ -1646,7 +1630,6 @@ button {
         margin-bottom: 30px;
         text-align: center;
         position: relative;
-
         &:hover {
             img {
                 &:nth-child(2) {
@@ -1660,7 +1643,6 @@ button {
             height: 85px;
             margin-left: auto;
             margin-right: auto;
-
             &:nth-child(2) {
                 position: absolute;
                 left: 0;
@@ -1672,16 +1654,19 @@ button {
         }
     }
 }
+
+
 /*-- End Partner --*/
 
+
 /*-- App --*/
+
 .app-area {
     background-image: url('assets/img/home-one/app-bg.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
-
     &:before {
         position: absolute;
         content: '';
@@ -1695,7 +1680,6 @@ button {
     .app-content {
         .section-title {
             margin-bottom: 25px;
-    
             .sub-title {
                 color: $white-color;
             }
@@ -1707,12 +1691,10 @@ button {
             margin: 0;
             padding: 0;
             position: relative;
-    
             li {
                 list-style-type: none;
                 display: inline-block;
                 margin-right: 10px;
-    
                 &:last-child {
                     margin-right: 0;
                 }
@@ -1721,7 +1703,6 @@ button {
                     border: 1px solid transparent;
                     border-radius: 10px;
                     border: 1px solid $white-color;
-    
                     &:hover {
                         transform: translate(5px, 0);
                     }
@@ -1732,7 +1713,6 @@ button {
     .app-img {
         text-align: center;
         position: relative;
-
         img {
             &:nth-child(1) {
                 position: relative;
@@ -1749,6 +1729,7 @@ button {
         }
     }
 }
+
 @keyframes app-ani {
     0% {
         transform: rotate(0deg);
@@ -1760,12 +1741,15 @@ button {
         transform: rotate(0deg);
     }
 }
+
+
 /*-- End App --*/
 
+
 /*-- Footer --*/
+
 .footer-item {
     margin-bottom: 30px;
-
     h3 {
         font-size: 20px;
         color: $blue-color;
@@ -1779,13 +1763,11 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: block;
                 margin-bottom: 10px;
                 color: #676767;
-
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -1798,7 +1780,6 @@ button {
                 a {
                     display: inline-block;
                     color: #676767;
-
                     &:hover {
                         color: $pink-color;
                     }
@@ -1810,19 +1791,16 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: block;
                 margin-bottom: 8px;
-
                 &:last-child {
                     margin-bottom: 0;
                 }
                 a {
                     display: block;
                     color: #676767;
-
                     &:hover {
                         color: $pink-color;
                         padding-left: 5px;
@@ -1837,7 +1815,6 @@ button {
         }
         form {
             position: relative;
-
             .form-control {
                 height: 55px;
                 border-radius: 5px;
@@ -1845,7 +1822,6 @@ button {
                 padding-left: 15px;
                 transition: $transition;
                 font-size: 15px;
-    
                 &:focus {
                     box-shadow: none;
                     border: 1px dashed $pink-color;
@@ -1864,7 +1840,6 @@ button {
                 font-size: 22px;
                 line-height: 20px;
                 padding: 11px 16px 12px;
-
                 &:hover {
                     background-color: $blue-color;
                 }
@@ -1880,24 +1855,25 @@ button {
         }
     }
 }
+
+
 /*-- End Footer --*/
 
+
 /*-- Copyright --*/
+
 .copyright-area {
     background-color: #e6e6e6;
     padding-top: 25px;
     padding-bottom: 25px;
-
     .copyright-item {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: inline-block;
                 margin-right: 10px;
-
                 &:nth-child(2) {
                     a {
                         background-color: #55acee;
@@ -1928,7 +1904,6 @@ button {
                     background-color: #3b5998;
                     font-size: 18px;
                     border-radius: 50%;
-
                     i {
                         line-height: 30px;
                     }
@@ -1941,13 +1916,11 @@ button {
         p {
             margin-bottom: 0;
             text-align: right;
-
             a {
                 display: inline-block;
                 color: $pink-color;
                 font-weight: 600;
                 border-bottom: 1px solid $pink-color;
-
                 &:hover {
                     color: $grey-color;
                     border-bottom: 1px solid $grey-color;
@@ -1956,11 +1929,19 @@ button {
         }
     }
 }
+
+
 /*-- End Copyright --*/
+
+
 /*----- End Home Demo One CSS -----*/
 
+
 /*----- Home Demo Two CSS -----*/
+
+
 /*-- Navbar --*/
+
 .main-nav.two {
     nav {
         .navbar-nav {
@@ -1972,8 +1953,9 @@ button {
                 }
                 a {
                     color: $blue-color;
-
-                    &:hover, &:focus, &.active {
+                    &:hover,
+                    &:focus,
+                    &.active {
                         color: $green-color;
                     }
                 }
@@ -1984,13 +1966,14 @@ button {
                                 color: $green-color;
                             }
                         }
-                        a {   
+                        a {
                             color: $white-color;
-
                             &:before {
                                 background-color: $green-color;
                             }
-                            &:hover, &:focus, &.active {
+                            &:hover,
+                            &:focus,
+                            &.active {
                                 color: $green-color;
                             }
                         }
@@ -1998,8 +1981,9 @@ button {
                             li {
                                 a {
                                     color: $white-color;
-
-                                    &:hover, &:focus, &.active {
+                                    &:hover,
+                                    &:focus,
+                                    &.active {
                                         color: $green-color;
                                     }
                                 }
@@ -2012,23 +1996,21 @@ button {
     }
     .tooltip-span {
         background-color: $green-color;
-
         &:before {
             border-top: 7px solid $green-color;
         }
         &.two {
             background-color: $blue-color;
-
             &:before {
                 border-top: 7px solid $blue-color;
             }
         }
     }
 }
+
 .side-nav.two {
     .job-right {
         background-color: $green-color;
-
         i {
             background-color: #17870a;
         }
@@ -2037,13 +2019,16 @@ button {
         }
     }
 }
+
+
 /*-- End Navbar --*/
 
+
 /*-- Banner --*/
+
 .banner-area.two {
     background-color: #dffedb;
     overflow: hidden;
-
     &:before {
         display: none;
     }
@@ -2053,7 +2038,6 @@ button {
     .banner-shape-two {
         img {
             position: absolute;
-
             &:nth-child(1) {
                 top: 0;
                 right: 0;
@@ -2067,9 +2051,9 @@ button {
         }
     }
 }
+
 .banner-content.two {
     height: 980px;
-
     p {
         margin-bottom: 10px;
         color: $blue-color;
@@ -2081,7 +2065,6 @@ button {
     .banner-form-area {
         .btn {
             background-color: $green-color;
-
             i {
                 background-color: #17870a;
             }
@@ -2101,13 +2084,12 @@ button {
         }
     }
 }
+
 .banner-img-two {
     text-align: center;
     position: relative;
-
     img {
         box-shadow: 0px 0px 20px 0px #dddddd73;
-
         &:nth-child(1) {
             position: relative;
             box-shadow: none;
@@ -2132,6 +2114,7 @@ button {
         }
     }
 }
+
 @keyframes banner-two-ani-one {
     0% {
         transform: translate(0, 0);
@@ -2143,6 +2126,7 @@ button {
         transform: translate(0, 0);
     }
 }
+
 @keyframes banner-two-ani-two {
     0% {
         transform: translate(0, 0);
@@ -2154,6 +2138,7 @@ button {
         transform: translate(0, 0);
     }
 }
+
 @keyframes banner-two-ani-three {
     0% {
         transform: translate(0, 0);
@@ -2165,20 +2150,22 @@ button {
         transform: translate(0, 0);
     }
 }
+
+
 /*-- End Banner --*/
 
+
 /*-- Support --*/
+
 .support-area {
     text-align: center;
     padding-top: 35px;
-
     p {
         font-weight: 600;
         font-family: $heading-font;
         font-size: 20px;
         margin-bottom: 50px;
         color: $blue-color;
-
         span {
             color: $green-color;
             border-bottom: 1px solid $green-color;
@@ -2200,12 +2187,10 @@ button {
     }
     .support-slider {
         padding-right: 120px;
-
         .owl-prev {
             font-size: 30px !important;
             color: $grey-color !important;
             transition: $transition;
-
             &:hover {
                 color: $green-color !important;
                 background-color: transparent !important;
@@ -2215,7 +2200,6 @@ button {
             font-size: 30px !important;
             color: $grey-color !important;
             transition: $transition;
-
             &:hover {
                 color: $green-color !important;
                 background-color: transparent !important;
@@ -2236,9 +2220,13 @@ button {
         text-align: right;
     }
 }
+
+
 /*-- End Support --*/
 
+
 /*-- Company --*/
+
 .company-area.two {
     .section-title {
         text-align: center;
@@ -2252,11 +2240,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $green-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: $blue-color;
             }
@@ -2283,11 +2269,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $green-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: $blue-color;
             }
@@ -2318,12 +2302,11 @@ button {
         }
     }
 }
+
 .company-item.two {
     margin-bottom: 0;
-
     &:hover {
         transform: unset;
-
         .bottom {
             a {
                 color: $green-color;
@@ -2349,13 +2332,16 @@ button {
         }
     }
 }
+
+
 /*-- End Company --*/
 
+
 /*-- Explore --*/
+
 .explore-area.two {
     background-color: #dffedb;
     background-image: unset;
-
     .container {
         position: relative;
     }
@@ -2365,11 +2351,9 @@ button {
     .explore-item {
         text-align: center;
         margin-left: 0;
-
         .section-title {
             .sub-title {
                 color: $green-color;
-
                 &:before {
                     background-color: $white-color;
                 }
@@ -2386,28 +2370,26 @@ button {
                 .left-btn {
                     color: $white-color;
                     background-color: $green-color;
-
                     i {
                         background-color: #17870a;
                     }
                     &:hover {
                         background-color: #17870a;
                     }
-                }  
+                }
                 span {
                     color: $blue-color;
                 }
                 .right-btn {
                     color: $green-color;
                     border: 1px solid $green-color;
-
                     &:hover {
                         color: $white-color;
                         background-color: $green-color;
                     }
                 }
             }
-        }      
+        }
     }
     .explore-img {
         position: absolute;
@@ -2417,6 +2399,7 @@ button {
         animation: explore-img-ani 5s infinite linear;
     }
 }
+
 @keyframes explore-img-ani {
     0% {
         transform: rotateY(0deg);
@@ -2428,13 +2411,16 @@ button {
         transform: rotateY(0deg);
     }
 }
+
+
 /*-- End Explore --*/
 
+
 /*-- Categories --*/
+
 .categories-area {
     .nav-pills {
         margin-bottom: 30px;
-
         a {
             font-weight: 500;
             font-size: 20px;
@@ -2442,7 +2428,6 @@ button {
             padding: 15px 0;
             border-bottom: 1px solid #e4e4e4;
             position: relative;
-
             i {
                 display: inline-block;
                 margin-right: 5px;
@@ -2473,7 +2458,6 @@ button {
         box-shadow: 0px 0px 20px 0px #dddddd4a;
         z-index: 1;
         transition: $transition;
-
         &:before {
             position: absolute;
             content: '';
@@ -2489,7 +2473,6 @@ button {
         }
         &:hover {
             transform: translate(0, -10px);
-
             &:before {
                 width: 100%;
                 height: 100%;
@@ -2507,7 +2490,6 @@ button {
         h3 {
             margin-bottom: 5px;
             font-size: 16px;
-
             a {
                 display: inline-block;
                 color: $blue-color;
@@ -2525,35 +2507,39 @@ button {
             bottom: 2px;
             font-size: 30px;
             line-height: 30px;
-
             &:hover {
                 color: $green-color;
             }
         }
     }
 }
+
+
 /*-- End Categories --*/
 
+
 /*-- Work --*/
-.section-title.two{
+
+.section-title.two {
     .sub-title {
         &:before {
             background-color: $green-color;
         }
     }
 }
+
 .work-area.two {
     .section-title {
         text-align: center;
     }
 }
+
 .work-item.two {
     padding: 0 20px;
     background-color: $white-color;
     text-align: center;
     border-right: 1px dashed #d5d5d5;
     border-radius: 0;
-
     &:hover {
         h3 {
             color: $blue-color;
@@ -2585,23 +2571,26 @@ button {
     }
     &.work-border {
         border-right: 0;
-
         &:after {
             display: none;
         }
     }
 }
+
+
 /*-- End Work --*/
 
+
 /*-- Jobs --*/
+
 .job-area.two {
     position: relative;
     z-index: 1;
-
     .sorting-menu {
         ul {
             li {
-                &:hover, &.active {
+                &:hover,
+                &.active {
                     color: $green-color;
                 }
             }
@@ -2626,7 +2615,6 @@ button {
     }
     .job-item {
         box-shadow: 0px 0px 20px 0px #dddddd91;
-
         &:hover {
             border: 1px dashed $green-color;
             border-left: 2px solid $green-color;
@@ -2643,7 +2631,6 @@ button {
             ul {
                 li {
                     color: $green-color;
-
                     &:nth-child(3) {
                         color: #7068a3;
                     }
@@ -2676,7 +2663,6 @@ button {
             a {
                 color: $green-color;
                 border-bottom: 1px solid $green-color;
-
                 &:hover {
                     color: $blue-color;
                     border-bottom: 1px solid $blue-color;
@@ -2685,27 +2671,28 @@ button {
         }
     }
 }
+
+
 /*-- End Jobs --*/
 
+
 /*-- Candidate --*/
+
 .candidate-area {
     .section-title {
         text-align: center;
     }
     .candidate-browse {
         text-align: center;
-
         p {
             margin-bottom: 0;
             color: #7068a3;
             font-size: 17px;
-
             a {
                 display: inline-block;
                 color: $green-color;
                 border-bottom: 1px solid $green-color;
                 font-weight: 500;
-
                 &:hover {
                     color: $blue-color;
                     border-bottom: 1px solid $blue-color;
@@ -2722,11 +2709,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $green-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: $blue-color;
             }
@@ -2753,11 +2738,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $green-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: $blue-color;
             }
@@ -2788,23 +2771,20 @@ button {
         }
     }
 }
+
 .candidate-item {
     border: 2px dashed #dffedb;
     padding: 25px 25px 25px;
     border-radius: 5px;
     position: relative;
     margin-bottom: 30px;
-
     .left {
         max-width: 240px;
-
         h3 {
             font-size: 20px;
             margin-bottom: 5px;
-    
             a {
                 color: $blue-color;
-    
                 &:hover {
                     color: $green-color;
                 }
@@ -2821,7 +2801,6 @@ button {
         ul {
             margin: 0;
             padding: 0;
-    
             li {
                 list-style-type: none;
                 display: inline-block;
@@ -2838,11 +2817,9 @@ button {
             text-align: left;
             margin-left: 45px;
             margin-top: 22px;
-    
             a {
                 color: #7068a3;
                 font-size: 15px;
-    
                 i {
                     color: #7068a3;
                     top: -4px;
@@ -2850,7 +2827,6 @@ button {
                 &:hover {
                     margin-left: -45px;
                     color: $green-color;
-    
                     .one {
                         left: -60px;
                     }
@@ -2870,15 +2846,18 @@ button {
         max-width: 250px;
     }
 }
+
+
 /*-- End Candidate --*/
 
+
 /*-- Testimonial --*/
+
 .testimonial-area {
     background-image: url('assets/img/home-two/testimonial-bg.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-
     .owl-prev {
         position: absolute;
         top: 38%;
@@ -2888,11 +2867,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $green-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: $blue-color;
             }
@@ -2919,11 +2896,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $green-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: $blue-color;
             }
@@ -2961,7 +2936,6 @@ button {
     .testimonial-item {
         position: relative;
         padding-left: 280px;
-
         img {
             position: absolute;
             top: 0;
@@ -2986,14 +2960,17 @@ button {
         }
     }
 }
+
+
 /*-- End Testimonial --*/
 
+
 /*-- Blog --*/
+
 .blog-area.two {
     .cmn-link {
         a {
             color: $green-color;
-
             i {
                 color: $green-color;
             }
@@ -3014,17 +2991,19 @@ button {
         }
     }
 }
+
+
 /*-- End Blog --*/
 
+
 /*-- Register --*/
+
 .register-area {
     background-color: #dffedb;
     padding-top: 50px;
     padding-bottom: 20px;
-
     .container {
         position: relative;
-
         .row {
             padding-right: 390px;
         }
@@ -3035,12 +3014,10 @@ button {
         position: absolute;
         top: 0;
         right: 0;
-
         li {
             list-style-type: none;
             display: inline-block;
             margin-right: 10px;
-
             &:last-child {
                 margin-right: 0;
             }
@@ -3048,7 +3025,6 @@ button {
                 display: block;
                 border: 1px solid transparent;
                 border-radius: 15px;
-
                 &:hover {
                     border: 1px solid $blue-color;
                 }
@@ -3058,9 +3034,8 @@ button {
     .register-item {
         margin-bottom: 30px;
         padding-left: 30px;
-        border-left: 1px dashed  #7068a3;
+        border-left: 1px dashed #7068a3;
         position: relative;
-
         &:before {
             position: absolute;
             content: '';
@@ -3081,9 +3056,13 @@ button {
         }
     }
 }
+
+
 /*-- End Register --*/
 
+
 /*-- Footer --*/
+
 .footer-item.two {
     .footer-logo {
         ul {
@@ -3111,7 +3090,6 @@ button {
         form {
             .btn {
                 background-color: $green-color;
-
                 &:hover {
                     background-color: $blue-color;
                 }
@@ -3119,16 +3097,19 @@ button {
         }
     }
 }
+
+
 /*-- End Footer --*/
 
+
 /*-- Copyright --*/
+
 .copyright-area.two {
     .copyright-item {
         p {
             a {
                 color: $green-color;
                 border-bottom: 1px solid $green-color;
-
                 &:hover {
                     color: $blue-color;
                     border-bottom: 1px solid $blue-color;
@@ -3137,10 +3118,17 @@ button {
         }
     }
 }
+
+
 /*-- End Copyright --*/
+
+
 /*----- End Home Demo Two CSS -----*/
 
+
 /*----- Home Demo Three CSS -----*/
+
+
 /*-- Navbar --*/
 
 .main-nav.three {
@@ -3154,8 +3142,9 @@ button {
                 }
                 a {
                     color: $white-color;
-
-                    &:hover, &:focus, &.active {
+                    &:hover,
+                    &:focus,
+                    &.active {
                         color: $pink-color;
                     }
                 }
@@ -3166,13 +3155,14 @@ button {
                                 color: $pink-color;
                             }
                         }
-                        a {   
+                        a {
                             color: $white-color;
-
                             &:before {
                                 background-color: $pink-color;
                             }
-                            &:hover, &:focus, &.active {
+                            &:hover,
+                            &:focus,
+                            &.active {
                                 color: $pink-color;
                             }
                         }
@@ -3180,8 +3170,9 @@ button {
                             li {
                                 a {
                                     color: $white-color;
-
-                                    &:hover, &:focus, &.active {
+                                    &:hover,
+                                    &:focus,
+                                    &.active {
                                         color: $pink-color;
                                     }
                                 }
@@ -3195,14 +3186,12 @@ button {
     .tooltip-span {
         color: $blue-color;
         background-color: $white-color;
-
         &:before {
             border-top: 7px solid $white-color;
         }
         &.two {
             color: $white-color;
             background-color: $pink-color;
-
             &:before {
                 border-top: 7px solid $pink-color;
             }
@@ -3213,10 +3202,10 @@ button {
         box-shadow: 0px 0px 20px 0px #6363636b;
     }
 }
+
 .side-nav.three {
     .login-left {
         color: $white-color;
-
         i {
             color: $white-color;
         }
@@ -3226,7 +3215,6 @@ button {
     }
     .job-right {
         background-color: $pink-color;
-
         i {
             background-color: #fe5e22;
         }
@@ -3235,12 +3223,15 @@ button {
         }
     }
 }
+
+
 /*-- End Navbar --*/
 
+
 /*-- Banner --*/
+
 .banner-area.three {
     background-color: #161616;
-
     &:before {
         display: none;
     }
@@ -3261,7 +3252,6 @@ button {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-
         &:before {
             position: absolute;
             content: '';
@@ -3282,13 +3272,13 @@ button {
             position: relative;
             top: 24px;
             animation: banner-bottom-btn-ani 5s infinite linear;
-
             &:hover {
                 color: $pink-color;
             }
         }
     }
 }
+
 @keyframes banner-bottom-btn-ani {
     0% {
         transform: translate(0, 0);
@@ -3300,17 +3290,16 @@ button {
         transform: translate(0, 0);
     }
 }
+
 .banner-content.three {
     height: 1075px;
     max-width: 800px;
     padding-top: 95px;
-
     p {
         color: $white-color;
     }
     h1 {
         color: $white-color;
-
         span {
             color: $pink-color;
         }
@@ -3318,7 +3307,6 @@ button {
     .banner-form-area {
         .btn {
             background-color: $pink-color;
-
             i {
                 background-color: #fe5e22;
             }
@@ -3348,7 +3336,6 @@ button {
         padding-top: 0;
         padding-bottom: 0;
         margin-top: 140px;
-
         .container {
             .row {
                 padding-right: 0;
@@ -3356,7 +3343,6 @@ button {
         }
         .register-item {
             border-left: 1px dashed #babab9;
-
             &:before {
                 border-bottom: 9px solid $pink-color;
             }
@@ -3370,16 +3356,20 @@ button {
         }
     }
 }
+
+
 /*-- End Banner --*/
 
+
 /*-- Employer --*/
+
 .employer-area {
     padding-top: 155px;
-
     .section-title {
         text-align: center;
     }
 }
+
 .employer-item {
     margin-bottom: 30px;
     border-radius: 5px;
@@ -3388,7 +3378,6 @@ button {
     position: relative;
     padding: 25px 35px 25px 105px;
     transition: $transition;
-    
     &:hover {
         transform: translate(0, -10px);
     }
@@ -3406,13 +3395,11 @@ button {
         margin: 0;
         padding: 0;
         margin-bottom: 15px;
-
         li {
             list-style-type: none;
             display: inline-block;
             color: #7d789b;
             margin-right: 10px;
-
             i {
                 display: inline-block;
                 font-size: 16px;
@@ -3438,7 +3425,6 @@ button {
         padding: 4px 10px;
         font-size: 13px;
         display: inline-block;
-
         &.two {
             color: #c000ff;
         }
@@ -3459,7 +3445,6 @@ button {
         position: absolute;
         top: 10px;
         right: 10px;
-
         &.two {
             background-color: #a28c12;
         }
@@ -3471,11 +3456,11 @@ button {
         }
     }
 }
+
 .section-title.three {
     .sub-title-wrap {
         position: relative;
         display: inline-block;
-
         img {
             position: absolute;
             top: 3px;
@@ -3484,15 +3469,18 @@ button {
     }
     .sub-title {
         padding-left: 30px;
-
         &:before {
             display: none;
         }
     }
 }
+
+
 /*-- End Employer --*/
 
+
 /*-- System --*/
+
 .system-area {
     background-image: url('assets/img/home-three/system-bg.jpg');
     background-size: cover;
@@ -3500,11 +3488,9 @@ button {
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
-
     .system-shape {
         img {
             position: absolute;
-
             &:nth-child(1) {
                 top: 0;
                 right: 0;
@@ -3530,10 +3516,8 @@ button {
     .system-item {
         position: relative;
         max-width: 660px;
-
         .section-title {
             margin-bottom: 20px;
-
             .sub-title {
                 color: $white-color;
             }
@@ -3549,13 +3533,11 @@ button {
             margin: 0;
             padding: 0;
             margin-bottom: 40px;
-
             li {
                 list-style-type: none;
                 display: block;
                 margin-bottom: 20px;
                 color: $white-color;
-
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -3568,7 +3550,6 @@ button {
                     position: relative;
                     top: 6px;
                     margin-right: 15px;
-
                     &:before {
                         position: absolute;
                         content: '';
@@ -3585,11 +3566,9 @@ button {
         .system-video {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: inline-block;
-
                 .left-btn {
                     background-color: $pink-color;
                     color: $white-color;
@@ -3603,7 +3582,6 @@ button {
                     display: inline-block;
                     position: relative;
                     margin-right: 20px;
-            
                     i {
                         display: inline-block;
                         height: 50px;
@@ -3639,7 +3617,6 @@ button {
                     display: inline-block;
                     position: relative;
                     top: 4px;
-
                     i {
                         line-height: 40px;
                     }
@@ -3652,14 +3629,19 @@ button {
         }
     }
 }
+
+
 /*-- End System --*/
 
+
 /*-- Work --*/
+
 .work-area.three {
     .section-title {
         text-align: center;
     }
 }
+
 .work-item.three {
     i {
         color: $pink-color;
@@ -3668,14 +3650,19 @@ button {
         border-bottom: 12px solid $pink-color;
     }
 }
+
+
 /*-- End Work --*/
 
+
 /*-- Feature --*/
+
 .feature-area {
     .section-title {
         text-align: center;
     }
 }
+
 .feature-item {
     margin-bottom: 30px;
     text-align: center;
@@ -3686,7 +3673,6 @@ button {
     transition: $transition;
     position: relative;
     z-index: 1;
-
     &:before {
         position: absolute;
         content: '';
@@ -3722,7 +3708,6 @@ button {
     &:hover {
         transform: translate(0, -20px);
         background-color: $pink-color;
-
         &:before {
             opacity: 1;
         }
@@ -3737,7 +3722,6 @@ button {
     }
     a {
         display: block;
-
         img {
             margin-bottom: 30px;
             height: 200px;
@@ -3753,15 +3737,12 @@ button {
         margin-right: 10px;
         position: relative;
         z-index: 1;
-
         h3 {
             color: $white-color;
             font-size: 15px;
             margin-bottom: 3px;
-
             a {
                 color: $white-color;
-
                 &:hover {
                     color: $blue-color;
                 }
@@ -3782,16 +3763,20 @@ button {
         }
     }
 }
+
+
 /*-- End Feature --*/
 
+
 /*-- Pricing --*/
+
 .pricing-area {
     background-color: #fafafa;
-
     .section-title {
         text-align: center;
     }
 }
+
 .pricing-item {
     margin-bottom: 30px;
     background-color: $white-color;
@@ -3800,14 +3785,12 @@ button {
     padding: 25px 25px 30px;
     text-align: center;
     transition: $transition;
-
     &:hover {
         transform: translate(0, -10px);
         background-color: #f8e8e9;
     }
     .top {
         margin-bottom: 15px;
-
         h3 {
             font-size: 20px;
             color: $blue-color;
@@ -3820,8 +3803,7 @@ button {
             padding-bottom: 25px;
             border-bottom: 1px dashed #c9c9c9;
             position: relative;
-
-            &:before{
+            &:before {
                 position: absolute;
                 content: '';
                 bottom: -1px;
@@ -3838,14 +3820,12 @@ button {
     }
     .middle {
         margin-bottom: 20px;
-
         h4 {
             font-size: 25px;
             color: $pink-color;
-            border-bottom: 1px dashed #c9c9c9;    
+            border-bottom: 1px dashed #c9c9c9;
             margin-bottom: 0;
             padding-bottom: 15px;
-
             .span-right {
                 font-size: 15px;
                 font-weight: 500;
@@ -3860,13 +3840,11 @@ button {
             margin: 0;
             padding: 0;
             margin-bottom: 25px;
-
             li {
                 list-style-type: none;
                 display: block;
                 color: #767194;
                 margin-bottom: 10px;
-
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -3874,29 +3852,35 @@ button {
         }
     }
 }
+
+
 /*-- End Pricing --*/
 
+
 /*-- Partner --*/
+
 .partner-area.two {
     background-color: #fafafa;
 }
+
+
 /*-- End Partner --*/
 
+
 /*-- Client --*/
+
 .client-area {
     background-image: url('assets/img/home-two/testimonial-bg.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
-
     .client-img {
         img {
             position: absolute;
             border-radius: 50%;
             border: 5px solid $white-color;
             box-shadow: 0px 0px 20px 0px #dddddd4a;
-
             &:nth-child(1) {
                 top: 50px;
                 left: 185px;
@@ -3925,7 +3909,6 @@ button {
                 bottom: 80px;
                 right: 300px;
                 max-width: 85px;
-
             }
         }
     }
@@ -3938,7 +3921,6 @@ button {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
-
         p {
             font-size: 22px;
             color: #64607c;
@@ -3962,11 +3944,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $pink-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: $blue-color;
             }
@@ -3993,11 +3973,9 @@ button {
         z-index: 1;
         transition: $transition;
         opacity: 0;
-
         &:hover {
             color: $pink-color !important;
             background-color: transparent !important;
-
             &:after {
                 background-color: $blue-color;
             }
@@ -4028,22 +4006,30 @@ button {
         }
     }
 }
+
+
 /*-- End Client --*/
 
+
 /*-- Blog --*/
+
 .blog-area.three {
     background-color: #fafafa;
-
     .section-title {
         text-align: center;
     }
 }
+
+
 /*-- End Blog --*/
 
+
 /*-- Footer --*/
+
 .footer-area.three {
     background-color: #191918;
 }
+
 .footer-item.three {
     h3 {
         color: $white-color;
@@ -4052,7 +4038,6 @@ button {
         ul {
             li {
                 color: #afadad;
-
                 a {
                     color: #afadad;
                 }
@@ -4077,22 +4062,31 @@ button {
         }
     }
 }
+
+
 /*-- End Footer --*/
 
+
 /*-- Copyright --*/
+
 .copyright-area.three {
     background-color: #292929;
-
     .copyright-item {
         p {
             color: $white-color;
         }
     }
 }
+
+
 /*-- End Copyright --*/
+
+
 /*----- End Home Demo Three CSS -----*/
 
+
 /*----- About CSS -----*/
+
 .page-title-area {
     background-image: url('assets/img/page-title-bg.jpg');
     background-size: cover;
@@ -4100,7 +4094,6 @@ button {
     background-repeat: no-repeat;
     position: relative;
     height: 400px;
-
     &:before {
         position: absolute;
         content: '';
@@ -4116,7 +4109,6 @@ button {
         z-index: 1;
         text-align: center;
         margin-top: 70px;
-
         h2 {
             color: $white-color;
             font-size: 40px;
@@ -4125,12 +4117,10 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: inline-block;
                 color: $white-color;
-
                 img {
                     display: inline-block;
                     margin-right: 3px;
@@ -4140,7 +4130,6 @@ button {
                 a {
                     display: inline-block;
                     color: $white-color;
-                    
                     &:hover {
                         color: $pink-color;
                     }
@@ -4155,6 +4144,7 @@ button {
         }
     }
 }
+
 .cmn-btn {
     background-color: $pink-color;
     color: $white-color;
@@ -4167,7 +4157,6 @@ button {
     line-height: 50px;
     display: inline-block;
     position: relative;
-
     i {
         display: inline-block;
         height: 50px;
@@ -4187,11 +4176,11 @@ button {
         background-color: #fe5e22;
     }
 }
+
 .new-area {
     .new-img {
         position: relative;
         margin-bottom: 30px;
-
         img {
             &:nth-child(1) {
                 position: relative;
@@ -4207,7 +4196,6 @@ button {
     }
     .about-content {
         margin-bottom: 30px;
-
         .section-title {
             margin-bottom: 20px;
         }
@@ -4219,11 +4207,13 @@ button {
         }
     }
 }
+
 .counter-area.two {
     &:before {
         display: none;
     }
 }
+
 .candidate-area.two {
     .owl-prev {
         &:after {
@@ -4244,13 +4234,11 @@ button {
     .candidate-item {
         border: 2px dashed $pink-color;
         margin-bottom: 0;
-
         .left {
             .cmn-link {
                 a {
                     &:hover {
                         color: $pink-color;
-
                         .two {
                             color: $pink-color;
                         }
@@ -4260,22 +4248,23 @@ button {
         }
     }
 }
+
+
 /*----- End About CSS -----*/
 
+
 /*----- Jobs CSS -----*/
+
 .pagination-area {
     text-align: center;
-
     ul {
         margin: 0;
         padding: 0;
-
         li {
             list-style-type: none;
             display: inline-block;
             margin-right: 3px;
             margin-left: 3px;
-
             a {
                 text-align: center;
                 padding: 5px 15px;
@@ -4283,7 +4272,6 @@ button {
                 border: 1px dashed $pink-color;
                 display: inline-block;
                 color: $pink-color;
-
                 &:hover {
                     color: $white-color;
                     background-color: $pink-color;
@@ -4292,6 +4280,7 @@ button {
         }
     }
 }
+
 .job-area-list {
     .job-list-item {
         margin: 0;
@@ -4299,18 +4288,15 @@ button {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 30px;
-
         li {
             list-style-type: none;
             display: inline-block;
             flex: 0 0 60%;
             max-width: 60%;
-
             &:last-child {
                 flex: 0 0 40%;
                 max-width: 40%;
                 text-align: right;
-
                 .sort {
                     display: inline-block;
                     margin-right: 8px;
@@ -4323,7 +4309,6 @@ button {
                 .form-group {
                     margin-bottom: 0;
                     display: inline-block;
-
                     .nice-select {
                         height: 45px;
                         border-radius: 5px;
@@ -4333,8 +4318,7 @@ button {
                         line-height: 45px;
                         display: block;
                         width: 100%;
-
-                        .list { 
+                        .list {
                             .option {
                                 display: block;
                                 width: 100%;
@@ -4352,7 +4336,6 @@ button {
                 font-size: 16px;
                 color: $blue-color;
                 margin-right: 25px;
-
                 span {
                     color: $pink-color;
                 }
@@ -4362,7 +4345,6 @@ button {
                 &.rss {
                     color: $pink-color;
                     margin-right: 0;
-
                     i {
                         display: inline-block;
                         font-size: 20px;
@@ -4388,10 +4370,8 @@ button {
             border-radius: 5px;
             border: 1px dashed $pink-color;
             margin-bottom: 30px;
-
             form {
                 position: relative;
-
                 label {
                     position: absolute;
                     margin-bottom: 0;
@@ -4405,7 +4385,6 @@ button {
                     border: 1px solid #e1e1e1;
                     font-size: 14px;
                     padding-left: 40px;
-    
                     &:focus {
                         box-shadow: none;
                         border: 1px solid $pink-color;
@@ -4422,7 +4401,6 @@ button {
                     height: 45px;
                     font-weight: 500;
                     margin-top: 10px;
-
                     &:hover {
                         background-color: $blue-color;
                     }
@@ -4433,21 +4411,17 @@ button {
             padding: 22px 25px 25px;
             border-radius: 5px;
             border: 1px dashed $pink-color;
-
             .search {
                 border-bottom: 1px solid #e9e9e9;
-
                 form {
                     position: relative;
                     margin-bottom: 30px;
-
                     .form-control {
                         height: 45px;
                         border-radius: 5px;
                         border: 1px solid #e1e1e1;
                         font-size: 14px;
                         padding-left: 15px;
-        
                         &:focus {
                             box-shadow: none;
                             border: 1px solid $pink-color;
@@ -4465,7 +4439,6 @@ button {
                         padding-left: 12px;
                         padding-right: 12px;
                         font-size: 20px;
-
                         &:hover {
                             background-color: $blue-color;
                         }
@@ -4475,19 +4448,19 @@ button {
                     overflow-y: scroll;
                     height: 220px;
                 }
-                ::-webkit-scrollbar {
+                 ::-webkit-scrollbar {
                     width: 10px;
                 }
-                ::-webkit-scrollbar-track {
-                    background: #e1e1e1; 
+                 ::-webkit-scrollbar-track {
+                    background: #e1e1e1;
                     border-radius: 30px;
                 }
-                ::-webkit-scrollbar-thumb {
-                    background: #acacac; 
+                 ::-webkit-scrollbar-thumb {
+                    background: #acacac;
                     border-radius: 30px;
                 }
-                ::-webkit-scrollbar-thumb:hover {
-                    background: $pink-color; 
+                 ::-webkit-scrollbar-thumb:hover {
+                    background: $pink-color;
                 }
             }
             .cmn-padding {
@@ -4498,10 +4471,8 @@ button {
             .location {
                 form {
                     position: relative;
-
                     .form-group {
                         margin-bottom: 15px;
-
                         &:last-child {
                             margin-bottom: 0;
                         }
@@ -4524,7 +4495,6 @@ button {
                             border: 1px solid #e1e1e1;
                             font-size: 14px;
                             padding-left: 45px;
-            
                             &:focus {
                                 box-shadow: none;
                                 border: 1px solid $pink-color;
@@ -4541,7 +4511,6 @@ button {
             .salary {
                 .form-group {
                     margin-bottom: 0;
-
                     .range {
                         color: $pink-color;
                         font-weight: 500;
@@ -4552,7 +4521,6 @@ button {
             .level {
                 padding-top: 22px;
                 border-top: 1px solid #e9e9e9;
-
                 .btn {
                     margin-top: 20px;
                     padding-top: 12px;
@@ -4563,7 +4531,6 @@ button {
                     background-color: $pink-color;
                     border-radius: 5px;
                     transition: $transition;
-
                     &:hover {
                         background-color: $blue-color;
                     }
@@ -4576,7 +4543,6 @@ button {
             text-align: center;
             border-radius: 5px;
             margin-top: 30px;
-
             img {
                 padding-bottom: 30px;
             }
@@ -4585,7 +4551,6 @@ button {
                 padding-top: 30px;
                 padding-bottom: 25px;
                 border-radius: 0 0 5px 5px;
-
                 span {
                     display: block;
                     color: $white-color;
@@ -4594,10 +4559,8 @@ button {
                 h3 {
                     font-size: 40px;
                     margin-bottom: 0;
-
                     a {
                         color: $white-color;
-
                         &:hover {
                             color: $blue-color;
                         }
@@ -4609,7 +4572,6 @@ button {
     .flex-divide {
         display: flex;
         flex-wrap: wrap;
-
         .left {
             flex: 0 0 50%;
             max-width: 50%;
@@ -4626,29 +4588,30 @@ button {
     .job-cmn-cat {
         margin: 0;
         padding: 0;
-    
         li {
             list-style-type: none;
             display: block;
             color: #7d789b;
             margin-bottom: 15px;
-    
             &:last-child {
                 margin-bottom: 0;
             }
         }
     }
 }
+
+
 /*----- End Jobs CSS -----*/
 
+
 /*----- Job Details CSS -----*/
+
 .page-title-area.two {
     .d-table-cell {
         vertical-align: bottom;
     }
     .left {
         margin-bottom: 30px;
-
         img {
             margin-bottom: 15px;
         }
@@ -4660,17 +4623,14 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: inline-block;
                 color: #d9d9d9;
                 margin-right: 20px;
-
                 &:last-child {
                     margin-right: 0;
                     color: #00d2ff;
-
                     i {
                         color: #d9d9d9;
                     }
@@ -4688,7 +4648,6 @@ button {
     .right {
         text-align: center;
         margin-bottom: 30px;
-
         .cmn-btn {
             padding-left: 35px;
             padding-right: 85px;
@@ -4697,14 +4656,12 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: inline-block;
                 padding-right: 10px;
                 border-right: 1px solid $white-color;
                 margin-right: 10px;
-
                 &:last-child {
                     border-right: 0;
                     margin-right: 0;
@@ -4713,7 +4670,6 @@ button {
                 a {
                     display: block;
                     color: $white-color;
-
                     i {
                         display: inline-block;
                         font-size: 17px;
@@ -4729,11 +4685,11 @@ button {
         }
     }
 }
+
 .job-details-area {
     .details-item {
         .details-inner {
             margin-bottom: 30px;
-
             &:last-child {
                 margin-bottom: 0;
             }
@@ -4747,10 +4703,8 @@ button {
             }
             .job-details-slider {
                 margin-top: 20px;
-
                 .slider-item {
                     position: relative;
-
                     &:before {
                         position: absolute;
                         content: '';
@@ -4775,11 +4729,9 @@ button {
                 z-index: 1;
                 transition: $transition;
                 opacity: 0;
-        
                 &:hover {
                     color: $pink-color !important;
                     background-color: transparent !important;
-        
                     &:after {
                         background-color: #fff;
                     }
@@ -4806,11 +4758,9 @@ button {
                 z-index: 1;
                 transition: $transition;
                 opacity: 0;
-        
                 &:hover {
                     color: $pink-color !important;
                     background-color: transparent !important;
-        
                     &:after {
                         background-color: #fff;
                     }
@@ -4844,12 +4794,10 @@ button {
                 margin: 0;
                 padding: 0;
                 margin-top: 20px;
-
                 li {
                     list-style-type: none;
                     display: block;
                     margin-bottom: 10px;
-
                     &:last-child {
                         margin-bottom: 0;
                     }
@@ -4866,12 +4814,12 @@ button {
         }
     }
 }
+
 .video-wrap {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-
     a {
         z-index: 10;
         display: block;
@@ -4883,7 +4831,6 @@ button {
         font-size: 60px;
         text-align: center;
         color: $white-color;
-
         &:before {
             content: "";
             position: absolute;
@@ -4916,7 +4863,6 @@ button {
         }
         &:hover {
             color: $white-color;
-
             &:before {
                 background-color: $blue-color;
             }
@@ -4926,6 +4872,7 @@ button {
         }
     }
 }
+
 @keyframes pulse-border {
     0% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
@@ -4936,13 +4883,13 @@ button {
         opacity: 0;
     }
 }
+
 .widget-area {
     .widget-item {
         border-radius: 5px;
         border: 1px dashed $pink-color;
         padding: 25px 30px 30px;
         margin-bottom: 30px;
-
         &:last-child {
             margin-bottom: 0;
         }
@@ -4953,7 +4900,6 @@ button {
             position: relative;
             border-bottom: 1px solid #e1e1e1;
             padding-bottom: 15px;
-
             &:before {
                 position: absolute;
                 content: '';
@@ -4969,7 +4915,6 @@ button {
     .job {
         form {
             position: relative;
-
             label {
                 margin-bottom: 0;
                 position: absolute;
@@ -4984,7 +4929,6 @@ button {
                 font-size: 14px;
                 transition: $transition;
                 margin-bottom: 15px;
-
                 &:focus {
                     box-shadow: none;
                     border: 1px solid $pink-color;
@@ -4998,7 +4942,6 @@ button {
                 color: $white-color;
                 background-color: $pink-color;
                 transition: $transition;
-
                 &:hover {
                     background-color: $blue-color;
                 }
@@ -5009,7 +4952,6 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: block;
@@ -5018,7 +4960,6 @@ button {
                 border-bottom: 1px solid #e1e1e1;
                 padding-bottom: 20px;
                 margin-bottom: 20px;
-
                 &:last-child {
                     padding-bottom: 0;
                     margin-bottom: 0;
@@ -5044,7 +4985,6 @@ button {
     }
     .download {
         padding: 30px 30px 30px;
-
         a {
             display: block;
             color: $white-color;
@@ -5056,14 +4996,12 @@ button {
             border-radius: 5px;
             font-weight: 500;
             margin-bottom: 10px;
-
             &:hover {
                 background-color: $blue-color;
             }
             &.right {
                 background-color: $blue-color;
                 margin-bottom: 0;
-
                 &:hover {
                     background-color: $pink-color;
                 }
@@ -5078,7 +5016,6 @@ button {
             padding-left: 105px;
             border: 1px dashed $pink-color;
             border-radius: 5px 5px 0 0;
-
             img {
                 position: absolute;
                 top: 25px;
@@ -5104,11 +5041,9 @@ button {
         .widget-item {
             border-radius: 0 0 5px 5px;
             border-top: 0;
-            
             a {
                 display: block;
                 color: $grey-color;
-
                 &:hover {
                     color: $pink-color;
                 }
@@ -5119,13 +5054,11 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 position: relative;
                 display: block;
                 margin-bottom: 15px;
-
                 &:before {
                     position: absolute;
                     content: '';
@@ -5141,14 +5074,13 @@ button {
                 a {
                     display: block;
                     color: $grey-color;
-
                     &:hover {
                         color: $pink-color;
                     }
                 }
                 span {
                     display: block;
-                    color: $pink-color; 
+                    color: $pink-color;
                     font-weight: 500;
                     position: absolute;
                     top: 0;
@@ -5160,7 +5092,6 @@ button {
     .recent {
         .recent-inner {
             margin-bottom: 30px;
-
             &:last-child {
                 margin-bottom: 0;
             }
@@ -5169,13 +5100,11 @@ button {
                 padding: 0;
                 display: flex;
                 flex-wrap: wrap;
-    
                 li {
                     list-style-type: none;
                     display: block;
                     flex: 0 0 30%;
                     max-width: 30%;
-    
                     &:last-child {
                         flex: 0 0 60%;
                         max-width: 60%;
@@ -5196,7 +5125,6 @@ button {
                         margin-bottom: 4px;
                         font-size: 15px;
                         font-weight: 500;
-    
                         &:hover {
                             color: $pink-color;
                         }
@@ -5216,18 +5144,15 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: inline-block;
                 margin-right: 7px;
                 margin-top: 5px;
-
                 a {
                     display: block;
                     font-weight: 500;
                     color: $grey-color;
-
                     &:hover {
                         color: $pink-color;
                     }
@@ -5236,38 +5161,38 @@ button {
         }
     }
 }
+
 .job-details-related {
     background-color: #fafafa;
-
     .section-title {
         margin-bottom: 30px;
-
         h2 {
             font-size: 25px;
         }
     }
 }
+
+
 /*----- End Job Details CSS -----*/
 
+
 /*----- Post A Job CSS -----*/
+
 .post-job-area {
     .post-item {
         text-align: center;
         background-color: #f5f5f5;
         padding: 40px 50px 50px;
         border-radius: 5px;
-
         .section-title {
             max-width: 670px;
             margin-left: auto;
             margin-right: auto;
-
             h2 {
                 font-size: 30px;
                 margin-bottom: 25px;
                 position: relative;
                 padding-bottom: 10px;
-
                 &:before {
                     position: absolute;
                     content: '';
@@ -5300,7 +5225,6 @@ button {
         .form-group {
             margin-bottom: 30px;
             text-align: left;
-
             label {
                 margin-bottom: 10px;
                 font-weight: 500;
@@ -5311,13 +5235,12 @@ button {
                 border: 1px solid $white-color;
                 font-size: 14px;
                 transition: $transition;
-
                 &:focus {
                     box-shadow: none;
                     border: 1px solid $pink-color;
                 }
             }
-            ::placeholder {
+             ::placeholder {
                 color: rgb(163, 163, 163);
             }
             .nice-select {
@@ -5330,7 +5253,6 @@ button {
                 transition: $transition;
                 line-height: 50px;
                 margin-bottom: 30px;
-
                 .list {
                     display: block;
                     width: 100%;
@@ -5346,27 +5268,28 @@ button {
             padding: 12px 100px;
             font-weight: 500;
             transition: $transition;
-
             &:hover {
                 background-color: $blue-color;
             }
         }
     }
 }
+
+
 /*----- End Post A Job CSS -----*/
 
+
 /*----- Candidates CSS -----*/
+
 .job-filter-area {
     .form-group {
         margin-bottom: 30px;
-
         .form-control {
             height: 50px;
             border: 1px dashed $pink-color;
             padding-left: 15px;
             transition: $transition;
             font-size: 14px;
-
             &:focus {
                 box-shadow: none;
                 border: 1px dashed $blue-color;
@@ -5382,7 +5305,6 @@ button {
             width: 100%;
             line-height: 50px;
             margin-bottom: 30px;
-
             .list {
                 width: 100%;
                 display: block;
@@ -5397,6 +5319,7 @@ button {
         margin-bottom: 30px;
     }
 }
+
 .job-showing-area {
     h4 {
         font-size: 20px;
@@ -5408,11 +5331,9 @@ button {
         padding: 15px 15px;
         border-radius: 5px;
         margin-bottom: 50px;
-
         .left {
             .form-group {
                 margin-bottom: 0;
-
                 .nice-select {
                     height: 45px;
                     line-height: 45px;
@@ -5421,7 +5342,6 @@ button {
                     border: 0;
                     width: 200px;
                     display: block;
-                    
                     .list {
                         width: 100%;
                         display: block;
@@ -5434,12 +5354,10 @@ button {
                 margin: 0;
                 padding: 0;
                 text-align: right;
-
                 li {
                     list-style-type: none;
                     display: inline-block;
                     margin-left: 8px;
-
                     a {
                         display: block;
                         width: 40px;
@@ -5450,7 +5368,6 @@ button {
                         border-radius: 5px;
                         text-align: center;
                         font-size: 30px;
-
                         i {
                             line-height: 40px;
                         }
@@ -5464,16 +5381,15 @@ button {
         }
     }
 }
+
 .candidate-item.two {
     border: 2px dashed $pink-color;
     overflow: hidden;
-
     .experience {
         margin: 0;
         padding: 0;
         margin-top: 14px;
         margin-bottom: 18px;
-
         li {
             list-style-type: none;
             display: block;
@@ -5484,7 +5400,6 @@ button {
             border-radius: 0;
             padding: 0;
             margin-right: 0;
-
             &:last-child {
                 margin-bottom: 0;
             }
@@ -5503,11 +5418,9 @@ button {
     .left {
         .cmn-link {
             margin-top: 10px;
-
             a {
                 &:hover {
                     color: $pink-color;
-
                     .two {
                         color: $pink-color;
                     }
@@ -5520,14 +5433,17 @@ button {
         width: 100%;
     }
 }
+
+
 /*----- End Candidates CSS -----*/
 
+
 /*----- Candidate Details CSS -----*/
+
 .page-title-area.two {
     .left.two {
         position: relative;
         padding-left: 255px;
-
         img {
             position: absolute;
             bottom: -75px;
@@ -5541,15 +5457,15 @@ button {
                 a {
                     display: inline-block;
                     color: $pink-color;
-
                     &:hover {
                         color: #d9d9d9;
                     }
                 }
             }
-        }        
+        }
     }
 }
+
 .person-details-area {
     .details-item {
         h3 {
@@ -5559,10 +5475,8 @@ button {
         }
         .profile {
             margin-bottom: 50px;
-
             p {
                 margin-bottom: 10px;
-
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -5579,13 +5493,11 @@ button {
                 padding: 0;
                 padding-top: 5px;
                 margin-bottom: 10px;
-
                 li {
                     list-style-type: none;
                     display: inline-block;
                     color: $pink-color;
                     font-weight: 500;
-
                     img {
                         display: inline-block;
                         margin-right: 5px;
@@ -5613,16 +5525,13 @@ button {
         }
         .skills {
             margin-bottom: 50px;
-
             .skill-wrap {
                 overflow: hidden;
                 padding-right: 15px;
-
                 .skill {
                     margin-bottom: 35px;
                     position: relative;
-                        
-                    &:before{
+                    &:before {
                         width: 100%;
                         height: 3px;
                         content: "";
@@ -5649,7 +5558,6 @@ button {
             background: $pink-color;
             display: block;
             position: relative;
-    
             &:before {
                 position: absolute;
                 content: '';
@@ -5660,7 +5568,7 @@ button {
                 border-radius: 12px;
                 background-color: $pink-color;
             }
-            span{
+            span {
                 position: absolute;
                 top: -35px;
                 padding: 0;
@@ -5672,43 +5580,37 @@ button {
             }
         }
         .skill1 {
-            width: 56%;  
-    
+            width: 56%;
             .skill-count1 {
                 right: 7px;
             }
         }
         .skill2 {
             width: 80%;
-    
             .skill-count2 {
                 right: 7px;
             }
         }
         .skill3 {
             width: 90%;
-    
             .skill-count3 {
                 right: 7px;
             }
         }
         .skill4 {
             width: 70%;
-    
             .skill-count4 {
                 right: 7px;
             }
         }
         .skill5 {
             width: 80%;
-    
             .skill-count5 {
                 right: 7px;
             }
         }
         .skill6 {
             width: 90%;
-    
             .skill-count6 {
                 right: 7px;
             }
@@ -5716,7 +5618,6 @@ button {
         .portfolio {
             .img {
                 margin-bottom: 30px;
-
                 img {
                     border-radius: 5px;
                 }
@@ -5729,7 +5630,6 @@ button {
             padding: 20px 20px 20px 155px;
             position: relative;
             margin-bottom: 30px;
-
             img {
                 position: absolute;
                 top: 20px;
@@ -5755,11 +5655,9 @@ button {
                 position: absolute;
                 top: 20px;
                 right: 20px;
-
                 li {
                     list-style-type: none;
                     display: inline-block;
-
                     span {
                         color: $white-color;
                         background-color: $pink-color;
@@ -5785,7 +5683,6 @@ button {
             background-color: #f4f4f4;
             border-radius: 5px;
             padding: 28px 25px 35px;
-
             h3 {
                 color: #1c2522;
                 margin-bottom: 5px;
@@ -5799,11 +5696,9 @@ button {
                 margin: 0;
                 padding: 0;
                 margin-bottom: 20px;
-
                 li {
                     list-style-type: none;
                     display: inline-block;
-
                     span {
                         color: $white-color;
                         background-color: $pink-color;
@@ -5827,7 +5722,6 @@ button {
             .form-group {
                 margin-bottom: 30px;
                 position: relative;
-
                 i {
                     position: absolute;
                     left: 15px;
@@ -5841,7 +5735,6 @@ button {
                     border: 1px solid #e0e0e0;
                     font-size: 14px;
                     transition: $transition;
-
                     &:focus {
                         border: 1px solid $pink-color;
                         box-shadow: none;
@@ -5859,7 +5752,6 @@ button {
                 padding: 12px 40px;
                 border-radius: 5px;
                 font-weight: 500;
-
                 &:hover {
                     background-color: $blue-color;
                 }
@@ -5879,7 +5771,6 @@ button {
     .candidate-item {
         overflow: hidden;
         border: 1px dashed $pink-color;
-
         &:last-child {
             margin-bottom: 0;
         }
@@ -5887,7 +5778,6 @@ button {
             a {
                 &:hover {
                     color: $pink-color;
-
                     .two {
                         color: $pink-color;
                     }
@@ -5896,31 +5786,31 @@ button {
         }
     }
 }
+
+
 /*----- End Candidate Details CSS -----*/
 
+
 /*----- Blog Details CSS -----*/
+
 .blog-details-area {
     .details-item {
         .details-img {
             margin-bottom: 30px;
-
             ul {
                 margin: 0;
                 padding: 0;
                 margin-bottom: 20px;
-
                 li {
-                    list-style-type:  none;
+                    list-style-type: none;
                     display: inline-block;
                     margin-right: 12px;
-
                     &:last-child {
                         margin-right: 0;
                     }
                     a {
                         display: inline-block;
                         color: $grey-color;
-
                         &:hover {
                             color: $pink-color;
                         }
@@ -5951,7 +5841,6 @@ button {
             .d-content {
                 position: relative;
                 margin-bottom: 10px;
-
                 span {
                     display: inline-block;
                     font-size: 90px;
@@ -5969,7 +5858,6 @@ button {
             }
             p {
                 margin-bottom: 15px;
-
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -5982,7 +5870,6 @@ button {
                 padding: 22px 60px 25px;
                 margin-bottom: 28px;
                 margin-top: 30px;
-
                 i {
                     display: block;
                     color: $pink-color;
@@ -6001,7 +5888,6 @@ button {
                     color: $pink-color;
                     position: relative;
                     padding-left: 25px;
-
                     &:before {
                         position: absolute;
                         content: '';
@@ -6025,11 +5911,9 @@ button {
             padding: 20px 20px 20px;
             border-radius: 5px;
             margin-bottom: 30px;
-
             ul {
                 margin: 0;
                 padding: 0;
-
                 li {
                     list-style-type: none;
                     display: inline-block;
@@ -6049,7 +5933,6 @@ button {
                             display: inline-block;
                             color: $pink-color;
                             margin-right: 8px;
-
                             &:hover {
                                 color: $blue-color;
                             }
@@ -6059,11 +5942,9 @@ button {
             }
             .right {
                 text-align: right;
-
                 ul {
                     li {
                         margin-right: 8px;
-
                         &:last-child {
                             margin-right: 0;
                         }
@@ -6076,7 +5957,6 @@ button {
                             font-size: 16px;
                             color: $white-color;
                             background-color: #3b5998;
-                            
                             i {
                                 line-height: 30px;
                             }
@@ -6110,7 +5990,6 @@ button {
         }
         .details-date {
             padding-bottom: 20px;
-
             .date-inner {
                 background-color: #f8e8e9;
                 border: 1px dashed $pink-color;
@@ -6119,7 +5998,6 @@ button {
                 position: relative;
                 transition: $transition;
                 margin-bottom: 30px;
-                
                 &:hover {
                     a {
                         opacity: 1;
@@ -6132,7 +6010,6 @@ button {
                     position: relative;
                     margin-bottom: 10px;
                     display: block;
-
                     &:before {
                         position: absolute;
                         content: '';
@@ -6161,7 +6038,6 @@ button {
                     padding-left: 6px;
                     padding-right: 6px;
                     opacity: 0;
-
                     i {
                         line-height: 110px;
                     }
@@ -6173,14 +6049,12 @@ button {
         }
         .details-comment {
             margin-bottom: 50px;
-
             h3 {
                 font-size: 20px;
                 color: $blue-color;
                 margin-bottom: 30px;
                 position: relative;
                 padding-bottom: 10px;
-
                 &:before {
                     position: absolute;
                     content: '';
@@ -6199,7 +6073,6 @@ button {
             ul {
                 margin: 0;
                 padding: 0;
-
                 li {
                     list-style-type: none;
                     display: block;
@@ -6208,7 +6081,6 @@ button {
                     border-bottom: 1px solid #ededed;
                     padding-bottom: 30px;
                     margin-bottom: 30px;
-
                     &:last-child {
                         padding-bottom: 0;
                         margin-bottom: 0;
@@ -6239,7 +6111,6 @@ button {
                         right: 0;
                         color: $pink-color;
                         display: inline-block;
-
                         &:hover {
                             color: $blue-color;
                         }
@@ -6251,7 +6122,6 @@ button {
             background-color: #f4f4f4;
             border-radius: 5px;
             padding: 28px 25px 35px;
-
             h3 {
                 color: #1c2522;
                 margin-bottom: 10px;
@@ -6260,7 +6130,6 @@ button {
             .form-group {
                 margin-bottom: 30px;
                 position: relative;
-
                 i {
                     position: absolute;
                     left: 15px;
@@ -6274,7 +6143,6 @@ button {
                     border: 1px solid #e0e0e0;
                     font-size: 14px;
                     transition: $transition;
-
                     &:focus {
                         border: 1px solid $pink-color;
                         box-shadow: none;
@@ -6292,7 +6160,6 @@ button {
                 padding: 12px 40px;
                 border-radius: 5px;
                 font-weight: 500;
-
                 &:hover {
                     background-color: $blue-color;
                 }
@@ -6300,9 +6167,13 @@ button {
         }
     }
 }
-/*----- End Blog Details CSS -----*/    
 
-/*----- Contact CSS -----*/    
+
+/*----- End Blog Details CSS -----*/
+
+
+/*----- Contact CSS -----*/
+
 .contact-info-area {
     .info-item {
         margin-bottom: 30px;
@@ -6311,10 +6182,8 @@ button {
         border-radius: 5px;
         padding: 30px 25px 30px;
         transition: $transition;
-
         &:hover {
             transform: translate(0, -10px);
-
             i {
                 transform: rotate(360deg);
             }
@@ -6336,12 +6205,10 @@ button {
         ul {
             margin: 0;
             padding: 0;
-
             li {
                 list-style-type: none;
                 display: block;
                 margin-bottom: 8px;
-
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -6353,7 +6220,6 @@ button {
                 a {
                     color: $grey-color;
                     display: inline-block;
-
                     &:hover {
                         color: $pink-color;
                     }
@@ -6362,6 +6228,7 @@ button {
         }
     }
 }
+
 .contact-form-area {
     .form-item {
         text-align: center;
@@ -6372,14 +6239,12 @@ button {
         padding: 30px 30px 30px;
         border-radius: 5px;
         position: relative;
-
         h2 {
             font-size: 30px;
             margin-bottom: 35px;
             color: $blue-color;
             position: relative;
             padding-bottom: 14px;
-
             &:before {
                 position: absolute;
                 content: '';
@@ -6408,7 +6273,6 @@ button {
         .form-group {
             margin-bottom: 30px;
             text-align: left;
-
             label {
                 margin-bottom: 10px;
                 font-weight: 500;
@@ -6421,7 +6285,6 @@ button {
                 transition: $transition;
                 padding-left: 20px;
                 font-size: 14px;
-
                 &:focus {
                     box-shadow: none;
                     border: 1px solid $blue-color;
@@ -6444,7 +6307,6 @@ button {
             border: 0;
             transition: $transition;
             opacity: 1;
-
             &:hover {
                 background-color: $blue-color;
             }
@@ -6463,6 +6325,7 @@ button {
         }
     }
 }
+
 .map-area {
     #map {
         height: 400px;
@@ -6471,12 +6334,15 @@ button {
         display: block;
     }
 }
-/*----- End Contact CSS -----*/    
 
-/*----- User Form CSS -----*/   
+
+/*----- End Contact CSS -----*/
+
+
+/*----- User Form CSS -----*/
+
 .user-form-area {
     height: 100vh;
-
     .user-img {
         background-image: url('assets/img/resgister-bg.jpg');
         background-size: cover;
@@ -6484,7 +6350,6 @@ button {
         background-repeat: no-repeat;
         width: 100%;
         height: 800px;
-
         img {
             display: none;
         }
@@ -6496,10 +6361,8 @@ button {
         margin-right: auto;
         text-align: center;
         padding-right: 30px;
-
         .top {
             margin-bottom: 30px;
-
             h2 {
                 font-size: 35px;
                 color: $pink-color;
@@ -6508,7 +6371,6 @@ button {
                 position: relative;
                 padding-bottom: 10px;
                 margin-bottom: 40px;
-
                 &:before {
                     position: absolute;
                     content: '';
@@ -6537,7 +6399,6 @@ button {
             .form-group {
                 margin-bottom: 15px;
                 text-align: left;
-
                 .form-control {
                     height: 50px;
                     padding-left: 20px;
@@ -6546,7 +6407,6 @@ button {
                     transition: $transition;
                     background-color: #f5f5f5;
                     border: 1px solid #f5f5f5;
-
                     &:focus {
                         border: 1px solid $pink-color;
                         box-shadow: none;
@@ -6563,7 +6423,6 @@ button {
                 width: 100%;
                 display: block;
                 font-weight: 500;
-
                 &:hover {
                     background-color: $blue-color;
                 }
@@ -6573,13 +6432,11 @@ button {
             ul {
                 margin: 0;
                 padding: 0;
-
                 li {
                     list-style-type: none;
                     display: inline-block;
                     margin-left: 3px;
                     margin-right: 3px;
-
                     a {
                         width: 40px;
                         height: 40px;
@@ -6589,7 +6446,6 @@ button {
                         color: $white-color;
                         background-color: #3b5998;
                         font-size: 20px;
-
                         i {
                             line-height: 40px;
                         }
@@ -6616,21 +6472,22 @@ button {
             }
         }
     }
-} 
-/*----- End User Form CSS -----*/    
+}
 
-/*----- Employers CSS -----*/    
+
+/*----- End User Form CSS -----*/
+
+
+/*----- Employers CSS -----*/
+
 .employer-area.two {
     padding-top: 0;
-
     .employer-item {
         padding: 25px 30px 25px 95px;
-
         ul {
             li {
                 &:nth-child(2) {
                     margin-right: 0;
-
                     i {
                         top: 0;
                         margin-right: 0;
@@ -6638,7 +6495,6 @@ button {
                 }
                 &:nth-child(3) {
                     margin-right: 0;
-
                     i {
                         top: 0;
                         margin-right: 0;
@@ -6646,7 +6502,6 @@ button {
                 }
                 &:nth-child(4) {
                     margin-right: 0;
-
                     i {
                         top: 0;
                         margin-right: 0;
@@ -6654,7 +6509,6 @@ button {
                 }
                 &:nth-child(5) {
                     margin-right: 0;
-
                     i {
                         top: 0;
                         margin-right: 0;
@@ -6662,7 +6516,6 @@ button {
                 }
                 &:nth-child(6) {
                     margin-right: 0;
-
                     i {
                         top: 0;
                         margin-right: 0;
@@ -6682,13 +6535,16 @@ button {
         }
     }
 }
-/*----- End Employers CSS -----*/    
 
-/*----- Employer Details CSS -----*/   
+
+/*----- End Employers CSS -----*/
+
+
+/*----- Employer Details CSS -----*/
+
 .employer-details-area {
     .client-wrap {
         padding-top: 20px;
-
         h2 {
             font-size: 20px;
             margin-bottom: 20px;
@@ -6702,7 +6558,6 @@ button {
         padding: 20px 20px 20px 155px;
         position: relative;
         margin-bottom: 30px;
-
         img {
             position: absolute;
             top: 20px;
@@ -6728,11 +6583,9 @@ button {
             position: absolute;
             top: 20px;
             right: 20px;
-
             li {
                 list-style-type: none;
                 display: inline-block;
-
                 span {
                     color: $white-color;
                     background-color: $pink-color;
@@ -6758,7 +6611,6 @@ button {
         background-color: #f4f4f4;
         border-radius: 5px;
         padding: 28px 25px 35px;
-
         h3 {
             color: #1c2522;
             margin-bottom: 5px;
@@ -6772,11 +6624,9 @@ button {
             margin: 0;
             padding: 0;
             margin-bottom: 20px;
-
             li {
                 list-style-type: none;
                 display: inline-block;
-
                 span {
                     color: $white-color;
                     background-color: $pink-color;
@@ -6800,7 +6650,6 @@ button {
         .form-group {
             margin-bottom: 30px;
             position: relative;
-
             i {
                 position: absolute;
                 left: 15px;
@@ -6814,7 +6663,6 @@ button {
                 border: 1px solid #e0e0e0;
                 font-size: 14px;
                 transition: $transition;
-
                 &:focus {
                     border: 1px solid $pink-color;
                     box-shadow: none;
@@ -6832,20 +6680,22 @@ button {
             padding: 12px 40px;
             border-radius: 5px;
             font-weight: 500;
-
             &:hover {
                 background-color: $blue-color;
             }
         }
     }
-} 
-/*----- End Employer Details CSS -----*/    
+}
 
-/*----- Testimonials CSS -----*/    
+
+/*----- End Employer Details CSS -----*/
+
+
+/*----- Testimonials CSS -----*/
+
 .feedback-area.two {
     background-color: $white-color;
     padding-bottom: 70px;
-
     &:before {
         display: none;
     }
@@ -6854,15 +6704,18 @@ button {
         box-shadow: 0px 0px 20px 0px #dddddd57;
     }
 }
-/*----- End Testimonials CSS -----*/    
 
-/*----- FAQ CSS -----*/    
+
+/*----- End Testimonials CSS -----*/
+
+
+/*----- FAQ CSS -----*/
+
 .faq-area {
     .faq-content {
-        .accordion { 
+        .accordion {
             margin: 0;
             padding: 0;
-        
             p {
                 display: none;
                 padding: 20px 15px 15px 15px;
@@ -6878,7 +6731,6 @@ button {
                 border-radius: 5px;
                 font-size: 17px;
                 color: $blue-color;
-    
                 &:after {
                     position: absolute;
                     right: 20px;
@@ -6904,7 +6756,6 @@ button {
                 list-style-type: none;
                 margin-bottom: 30px;
                 display: block;
-        
                 &:first-child {
                     border-top: 0;
                 }
@@ -6922,7 +6773,6 @@ button {
         width: 100%;
         height: 100%;
         border-radius: 5px;
-
         img {
             display: none;
         }
@@ -6930,7 +6780,6 @@ button {
     .faq-bottom {
         margin-top: 30px;
         text-align: center;
-
         h3 {
             color: $blue-color;
             font-size: 30px;
@@ -6946,23 +6795,25 @@ button {
             border-radius: 5px;
             padding: 12px 25px;
             font-weight: 500;
-
             &:hover {
                 background-color: $blue-color;
             }
         }
     }
 }
-/*----- End FAQ CSS -----*/    
+
+
+/*----- End FAQ CSS -----*/
+
 
 /*----- Coming Soon CSS -----*/
+
 .coming-soon-area {
     height: 100vh;
     text-align: center;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-
     .soon-item {
         h1 {
             font-weight: 900;
@@ -6977,7 +6828,6 @@ button {
             margin-bottom: 30px;
             color: $blue-color;
             position: relative;
-
             &:before {
                 position: absolute;
                 content: '';
@@ -7003,7 +6853,6 @@ button {
             margin-bottom: 30px;
             border-radius: 5px;
             background-color: $blue-color;
-
             h3 {
                 font-weight: 700;
                 font-size: 40px;
@@ -7017,16 +6866,19 @@ button {
         }
     }
 }
+
+
 /*----- End Coming Soon CSS -----*/
 
+
 /*----- Error CSS -----*/
+
 .error-area {
     height: 100vh;
     text-align: center;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-
     .error-content {
         h1 {
             font-size: 130px;
@@ -7049,21 +6901,23 @@ button {
             padding: 12px 35px;
             border-radius: 5px;
             font-weight: 500;
-
             &:hover {
                 background-color: $blue-color;
             }
         }
     }
 }
+
+
 /*----- End Error CSS -----*/
 
+
 /*----- Rules CSS -----*/
+
 .rules-area {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-
     .rules-item {
         h3 {
             font-size: 20px;
@@ -7072,20 +6926,22 @@ button {
         }
         p {
             margin-bottom: 30px;
-
             &:last-child {
                 margin-bottom: 0;
             }
         }
     }
 }
+
+
 /*----- End Rules CSS -----*/
 
+
 /*----- Dashboard CSS -----*/
+
 .dashboard-area {
     .profile-item {
         text-align: center;
-
         img {
             display: block;
             border-radius: 50%;
@@ -7118,7 +6974,6 @@ button {
             padding-bottom: 15px;
             padding-left: 10px;
             padding-right: 10px;
-
             i {
                 display: inline-block;
                 font-size: 20px;
@@ -7129,12 +6984,12 @@ button {
             }
         }
     }
-    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
         background-color: $blue-color;
     }
     .profile-content {
         text-align: center;
-
         .profile-content-inner {
             background-color: #f5f5f5;
             border-radius: 5px;
@@ -7147,7 +7002,6 @@ button {
             font-size: 35px;
             padding-bottom: 10px;
             position: relative;
-
             &:before {
                 position: absolute;
                 content: '';
@@ -7176,7 +7030,6 @@ button {
         .form-group {
             text-align: left;
             margin-bottom: 30px;
-
             label {
                 display: inline-block;
                 font-weight: 500;
@@ -7191,7 +7044,6 @@ button {
                 font-size: 14px;
                 border: 1px solid $white-color;
                 transform: $transition;
-
                 &:focus {
                     box-shadow: none;
                     border: 1px solid $pink-color;
@@ -7208,7 +7060,6 @@ button {
             background-color: $pink-color;
             transition: $transition;
             font-weight: 500;
-
             &:hover {
                 background-color: $blue-color;
             }
@@ -7220,9 +7071,13 @@ button {
         }
     }
 }
+
+
 /*----- End Dashboard CSS -----*/
 
+
 /*----- Resume CSS -----*/
+
 .resume-area {
     .details-item {
         .skills {
@@ -7232,7 +7087,6 @@ button {
     .resume-profile {
         text-align: center;
         margin-bottom: 30px;
-
         img {
             display: block;
             border-radius: 50%;
@@ -7253,9 +7107,13 @@ button {
         }
     }
 }
+
+
 /*----- End Resume CSS -----*/
 
+
 /*----- Preloader -----*/
+
 .loader {
     position: fixed;
     z-index: 99999;
@@ -7265,6 +7123,7 @@ button {
     left: 0;
     top: 0;
 }
+
 .spinner {
     width: 50px;
     height: 50px;
@@ -7272,28 +7131,34 @@ button {
     margin: 100px auto;
     animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
+
 @keyframes sk-rotateplane {
-    0% { 
+    0% {
         transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    } 
-    50% { 
+    }
+    50% {
         transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    } 
-    100% { 
+    }
+    100% {
         transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     }
 }
+
+
 /*----- End Preloader -----*/
 
+
 /*----- Back to Top -----*/
+
 #toTop {
-	position: fixed;
-	bottom: 30px;
+    position: fixed;
+    bottom: 30px;
     right: 30px;
-	cursor: pointer;
+    cursor: pointer;
     display: none;
     z-index: 10;
 }
+
 .back-to-top-btn {
     i {
         background: $pink-color;
@@ -7307,12 +7172,12 @@ button {
         border-radius: 50% 50% 0 0;
         transition: $transition;
         animation: back-to-top-ani 2s infinite linear;
-
         &:hover {
             background-color: $blue-color;
         }
     }
 }
+
 @keyframes back-to-top-ani {
     0% {
         transform: translate(0, 0);
@@ -7324,20 +7189,49 @@ button {
         transform: translate(0, 0);
     }
 }
+
+
 /*----- End Back to Top -----*/
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
 
-.autocomplete-container{
-    margin:5px !important;
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.autocomplete-container {
+    margin: 5px !important;
     box-shadow: none !important;
-    }
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.mat-h1, .mat-headline, .mat-typography .mat-h1, .mat-typography .mat-headline, .mat-typography h1 {
-    font:none !important;
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-h1,
+.mat-headline,
+.mat-typography .mat-h1,
+.mat-typography .mat-headline,
+.mat-typography h1 {
+    font: none !important;
 }

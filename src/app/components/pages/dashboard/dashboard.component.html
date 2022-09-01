@@ -411,18 +411,13 @@
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label><i class='bx bx-search'></i></label>
-                                                <input type="text" class="form-control" formControlName="Search"
-                                                    placeholder="Search Your Job">
+                                                <input type="text" class="form-control" formControlName="Search" placeholder="Search Your Job">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <ng-autocomplete [data]="duplicate" [searchKeyword]="keywordTechnology"
-                                                    placeholder="Technology" (selected)='selectEvent($event)'
-                                                    (inputChanged)='onChangeSearch($event)'
-                                                    (inputFocused)='onFocused($event)' formControlName="Technology"
-                                                    [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate"
-                                                    [initialValue]="">
+                                                <ng-autocomplete [data]="duplicate" [searchKeyword]="keywordTechnology" placeholder="Technology" (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)' formControlName="Technology" [itemTemplate]="itemTemplate"
+                                                    [notFoundTemplate]="notFoundTemplate" [initialValue]="">
                                                 </ng-autocomplete>
 
                                                 <ng-template #itemTemplate let-item>
@@ -436,11 +431,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <ng-autocomplete [data]="districtLocation" [searchKeyword]="keyword"
-                                                    placeholder="Location" (selected)='selectEvent($event)'
-                                                    (inputChanged)='onChangeSearch($event)'
-                                                    (inputFocused)='onFocused($event)' formControlName="Location"
-                                                    [itemTemplate]="itemTemplates"
+                                                <ng-autocomplete [data]="districtLocation" [searchKeyword]="keyword" placeholder="Location" (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)' formControlName="Location" [itemTemplate]="itemTemplates"
                                                     [notFoundTemplate]="notFoundTemplate">
                                                 </ng-autocomplete>
 
@@ -484,16 +475,12 @@
                                 <!-- <span>Web Developer</span> -->
                             </div>
 
-                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
-                                aria-orientation="vertical">
-                                <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
-                                    href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i
                                         class='bx bx-user'></i> My
                                     Profile</a>
 
-                                <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
-                                    href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
-                                    aria-selected="false">
+                                <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
                                     <div class="profile-list">
                                         <i class='bx bxs-inbox'></i> Applied Jobs
                                     </div>
@@ -511,40 +498,33 @@
 
                         <div class="col-lg-8 col-md-12">
                             <div class="tab-content" id="v-pills-tabContent">
-                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                    aria-labelledby="v-pills-home-tab">
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                                     <div class="profile-content">
                                         <form [formGroup]="educationForm" (ngSubmit)="onSubmit()">
                                             <div class="profile-content-inner">
                                                 <h2>Basic Info</h2>
                                                 <div formArrayName="basicdetails">
 
-                                                    <div *ngFor="let quantity of basicdetails().controls; let i=index"
-                                                        [formGroupName]="i">
+                                                    <div *ngFor="let quantity of basicdetails().controls; let i=index" [formGroupName]="i">
                                                         <div class="row">
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Your Name:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Tom Henry" formControlName="Name">
+                                                                    <input type="text" class="form-control" placeholder="Tom Henry" formControlName="Name">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Your Email:</label>
-                                                                    <input type="email" class="form-control"
-                                                                        placeholder="hello@alzo.com"
-                                                                        formControlName="Email">
+                                                                    <input type="email" class="form-control" placeholder="hello@alzo.com" formControlName="Email">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Phone:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="+123 - 456 - 789"
-                                                                        formControlName="Phone">
+                                                                    <input type="text" class="form-control" placeholder="+123 - 456 - 789" formControlName="Phone">
                                                                 </div>
                                                             </div>
 
@@ -556,8 +536,7 @@
                                                                     <mat-form-field style="
                                                             width: 100%;">
                                                                         <mat-label>Choose a date</mat-label>
-                                                                        <input matInput [matDatepicker]="picker"
-                                                                            formControlName="Dob">
+                                                                        <input matInput [matDatepicker]="picker" formControlName="Dob">
                                                                         <mat-hint>MM/DD/YYYY</mat-hint>
                                                                         <mat-datepicker-toggle matSuffix [for]="picker">
                                                                         </mat-datepicker-toggle>
@@ -569,18 +548,14 @@
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Job Title:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Web Developer"
-                                                                        formControlName="JobTitle">
+                                                                    <input type="text" class="form-control" placeholder="Web Developer" formControlName="JobTitle">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Position:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Team Leader"
-                                                                        formControlName="Position">
+                                                                    <input type="text" class="form-control" placeholder="Team Leader" formControlName="Position">
                                                                 </div>
                                                             </div>
 
@@ -588,12 +563,7 @@
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Salary:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="$1500/per month"
-                                                                        formControlName="Salary"
-                                                                        (keypress)="this.numbersOnly.numberOnly($event)"
-                                                                        autocomplete="off"
-                                                                        [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+                                                                    <input type="text" class="form-control" placeholder="$1500/per month" formControlName="Salary" (keypress)="this.numbersOnly.numberOnly($event)" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
                                                                 </div>
                                                             </div>
 
@@ -628,25 +598,20 @@
 
                                                 <div class="table table-bordered" formArrayName="education">
 
-                                                    <div *ngFor="let quantity of education().controls; let i=index"
-                                                        [formGroupName]="i">
+                                                    <div *ngFor="let quantity of education().controls; let i=index" [formGroupName]="i">
                                                         <div class="row">
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Title:</label>
                                                                     <!-- <input type="text" class="form-control" formControlName="Id" placeholder="" hidden> -->
-                                                                    <input type="text" class="form-control"
-                                                                        formControlName="Title"
-                                                                        placeholder="Under Graduate">
+                                                                    <input type="text" class="form-control" formControlName="Title" placeholder="Under Graduate">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Degree:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        formControlName="Degree"
-                                                                        placeholder="Bachelor of Computer Science">
+                                                                    <input type="text" class="form-control" formControlName="Degree" placeholder="Bachelor of Computer Science">
 
                                                                 </div>
                                                             </div>
@@ -654,18 +619,14 @@
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Institute:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        formControlName="Institute"
-                                                                        placeholder="Alzo University & Technology, UK">
+                                                                    <input type="text" class="form-control" formControlName="Institute" placeholder="Alzo University & Technology, UK">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Year:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        formControlName="Year"
-                                                                        placeholder="2015 - 2020">
+                                                                    <input type="text" class="form-control" formControlName="Year" placeholder="2015 - 2020">
                                                                     <!-- (keypress)="this.numbersOnly.numberOnly($event)" -->
                                                                 </div>
                                                                 <div class="col-lg-3" *ngIf="i>0" style="float: right">
@@ -713,33 +674,26 @@
                                                 </div>
                                                 <div class="table table-bordered" formArrayName="experience">
 
-                                                    <div *ngFor="let quantity of experience().controls; let i=index"
-                                                        [formGroupName]="i">
+                                                    <div *ngFor="let quantity of experience().controls; let i=index" [formGroupName]="i">
                                                         <div class="row">
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Company Name:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        formControlName="CompanyName"
-                                                                        placeholder="IT Solution">
+                                                                    <input type="text" class="form-control" formControlName="CompanyName" placeholder="IT Solution">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Location:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        formControlName="Location"
-                                                                        placeholder="Tanjore">
+                                                                    <input type="text" class="form-control" formControlName="Location" placeholder="Tanjore">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-lg-6 col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Position:</label>
-                                                                    <input type="text" class="form-control" c
-                                                                        placeholder="Software Engineer"
-                                                                        formControlName="Position">
+                                                                    <input type="text" class="form-control" c placeholder="Software Engineer" formControlName="Position">
                                                                 </div>
                                                             </div>
 
@@ -751,10 +705,8 @@
                                                         width: 100%;">
                                                                         <mat-label>Enter a date range</mat-label>
                                                                         <mat-date-range-input [rangePicker]="picker">
-                                                                            <input matStartDate placeholder="Start date"
-                                                                                formControlName="StartDate">
-                                                                            <input matEndDate placeholder="End date"
-                                                                                formControlName="EndDate">
+                                                                            <input matStartDate placeholder="Start date" formControlName="StartDate">
+                                                                            <input matEndDate placeholder="End date" formControlName="EndDate">
                                                                         </mat-date-range-input>
                                                                         <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
                                                                         <mat-datepicker-toggle matSuffix [for]="picker">
@@ -770,10 +722,7 @@
                                                             <div class="col-md-12 col-lg-12">
                                                                 <div class="form-group">
                                                                     <label>Description:</label>
-                                                                    <textarea name="Description" class="form-control"
-                                                                        formControlName="Description"
-                                                                        style="height:189%" cols="60" rows="8"
-                                                                        required></textarea>
+                                                                    <textarea name="Description" class="form-control" formControlName="Description" style="height:189%" cols="60" rows="8" required></textarea>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-12" *ngIf="i>0">
@@ -787,8 +736,7 @@
                                                 </div>
                                             </div>
                                             <div class="profile-content-inner" formArrayName="experience">
-                                                <div *ngFor="let quantity of experience().controls; let i=index"
-                                                    [formGroupName]="i">
+                                                <div *ngFor="let quantity of experience().controls; let i=index" [formGroupName]="i">
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col-lg-4 col-sm-12"></div>
@@ -801,17 +749,13 @@
                                                                 <mat-label>Favorite skills </mat-label>
                                                                 <mat-chip-list #chipList aria-label="skill selection">
 
-                                                                    <mat-chip *ngFor="let skill of skills"
-                                                                        (removed)="remove(skill)">
+                                                                    <mat-chip *ngFor="let skill of skills" (removed)="remove(skill)">
                                                                         {{skill.name}}
                                                                         <button matChipRemove>
                                                                             <mat-icon>cancel</mat-icon>
                                                                         </button>
                                                                     </mat-chip>
-                                                                    <input type="text" placeholder="New skill..."
-                                                                        [matChipInputFor]="chipList"
-                                                                        (matChipInputTokenEnd)="add($event)"
-                                                                        formControlName="Skills">
+                                                                    <input type="text" placeholder="New skill..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)" formControlName="Skills">
 
 
                                                                 </mat-chip-list>
@@ -828,43 +772,34 @@
 
                                             <div class="profile-content-inner" formArrayName="basicdetails">
                                                 <h2>Social Links</h2>
-                                                <div *ngFor="let quantity of basicdetails().controls; let i=index"
-                                                    [formGroupName]="i">
+                                                <div *ngFor="let quantity of basicdetails().controls; let i=index" [formGroupName]="i">
 
                                                     <div class="row">
                                                         <div class="col-lg-6 col-md-12">
                                                             <div class="form-group">
                                                                 <label>Facebook:</label>
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="https://www.facebook.com"
-                                                                    formControlName="Facebook">
+                                                                <input type="text" class="form-control" placeholder="https://www.facebook.com" formControlName="Facebook">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-lg-6 col-md-12">
                                                             <div class="form-group">
                                                                 <label>Twitter:</label>
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="https://www.twitter.com"
-                                                                    formControlName="Twitter">
+                                                                <input type="text" class="form-control" placeholder="https://www.twitter.com" formControlName="Twitter">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-lg-6 col-md-12">
                                                             <div class="form-group">
                                                                 <label>Instagram:</label>
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="https://www.instagram.com"
-                                                                    formControlName="Instagram">
+                                                                <input type="text" class="form-control" placeholder="https://www.instagram.com" formControlName="Instagram">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-lg-6 col-md-12">
                                                             <div class="form-group">
                                                                 <label>LinkedIn:</label>
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="https://www.linkedin.com"
-                                                                    formControlName="LinkedIn">
+                                                                <input type="text" class="form-control" placeholder="https://www.linkedin.com" formControlName="LinkedIn">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -879,8 +814,7 @@
                                 </div>
                                 <!-- <div class="employer-item"> -->
                                 <!-- {{appliedjob | json}} -->
-                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                    aria-labelledby="v-pills-messages-tab">
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                                     <div class="employer-item" *ngFor="let title of appliedjob">
                                         <!-- <a routerLink="/"> -->
 
@@ -892,7 +826,7 @@
                                             <p>{{title.Jobdescription}}</p>
                                             <span class="span-one">{{title.Technology}}</span>
                                             <span class="span-two">{{title.JobType}}</span>
-  
+
                                         </ul>
                                         <!-- </a> -->
                                     </div>

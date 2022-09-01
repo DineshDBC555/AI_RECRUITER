@@ -1,160 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-// import { FormGroup, FormControl, FormArray, FormBuilder, NgForm } from '@angular/forms'
-// import { NumbersOnlyService } from 'src/app/services/numbers-only.service';
-// import {Observable} from 'rxjs';
-// import {map, startWith} from 'rxjs/operators';
-// import { DashboardService } from './service/dashboard.service';
-// import { DatePipe } from '@angular/common';
-
-// @Component({
-//   selector: 'app-dashboard',
-//   templateUrl: './dashboard.component.html',
-//   styleUrls: ['./dashboard.component.scss']
-// })
-// export class DashboardComponent implements OnInit {
-//   public educationForm:FormGroup;
-//   public numbersOnly = new NumbersOnlyService();
-//   private apiDate : any;
-//   public Dob:any;
-
-//   str:any;
-//   myControl = new FormControl();
-//   options: string[] = ['Bachelor of computer application', 'Bachelor of computer science', 'Bachelor of Information technology'];
-//   filteredOptions: Observable<string[]>;
-//   constructor(private fb:FormBuilder,private BasicInfo:DashboardService,private datePipe : DatePipe) {
-//     this.educationForm = this.fb.group({
-//       basicdetails:this.fb.array([]),
-//       education: this.fb.array([]) ,
-//       experience: this.fb.array([])
-//     });
-//     this.addEducation()
-//     this.addExperience()
-//     this.addBasicDetails()
-
-//    }
-
-//    public Degree = {name:"BSC"};
-//    education() : FormArray {
-//     return this.educationForm.get("education") as FormArray
-//   }
-//   basicdetails() : FormArray{
-//     return this.educationForm.get("basicdetails") as FormArray
-
-//   }
-//   experience() : FormArray {
-//     return this.educationForm.get("experience") as FormArray
-//   }
-//   newBasicDetails(): FormGroup {
-//     return this.fb.group({
-//       Name: '',
-//       Email: '',
-//       Password:'',
-//       Phone: '',
-//       Dob:'',
-//       JobTitle:'',
-//       Position:'',
-//       Salary:'',
-//       CoverPicture:'',
-//       Active:1,
-//       CreatedBy:'',
-//       CreatedDate:'',
-//       UpdatedBy:'',
-//       UpdatedDate:'',
-//       Facebook:'',
-//       Twitter:'',
-//       Instagram:'',
-//       LinkedIn:''
-//     })
-//   }
-
-//   newEducation(): FormGroup {
-//     return this.fb.group({
-
-//       Title: '',
-//       Degree: '',
-//       Institute: '',
-//       Year:'',
-//       Active:1,
-//       CreatedBy:'',
-//       CreatedDate:'',
-//       UpdatedBy:'',
-//       UpdatedDate:'',
-//       UserId:145
-//     })
-//   }
-
-//   range = new FormGroup({
-//     start: new FormControl(),
-//     end: new FormControl()
-//   });
-
-//   newExperience(): FormGroup {
-//     return this.fb.group({
-//       UserId:145,
-//       CompanyName: '',
-//       Position: '',
-//       Location: '',
-//       StartDate:'',
-//       EndDate:'',
-//       Active:1,
-//       CreatedBy:'',
-//       CreatedDate:'',
-//       UpdatedBy:'',
-//       UpdatedDate:'',
-//     })
-//   }
-//   addBasicDetails(){
-//     this.basicdetails().push(this.newBasicDetails());
-//   }
-
-//   addEducation() {
-//     this.education().push(this.newEducation());
-//   }
-
-//   addExperience() {
-//     this.experience().push(this.newExperience());
-//   }
-
-//   removeEducation(i:number) {
-//     this.education().removeAt(i);
-//   }
-
-//   removeExperience(i:number) {
-//     this.experience().removeAt(i);
-//   }
-
-//   onSubmit() {
-//     this.apiDate = this.datePipe.transform(this.educationForm.value.basicdetails[0].Dob, 'yyyy-MM-dd');
-//     console.log(this.apiDate)
-//     this.educationForm.value.basicdetails[0].CoverPicture=this.educationForm.value.basicdetails[0].CoverPicture.replaceAll("\\", "\/");
-//     console.log(this.educationForm.value.basicdetails[0].CoverPicture.replaceAll("\\", "\/"));
-//     console.log(this.educationForm.value)
-//     // this.BasicInfo.saveUserDetails(this.educationForm.value.basicdetails[0]).subscribe((result)=>{
-//     //   console.log(result)
-//     // });
-//     // this.BasicInfo.saveEducationDetails(this.educationForm.value.education).subscribe((result)=>{
-//     //   console.log(result)
-//     // });
-//     // this.BasicInfo.saveExperienceDetails(this.educationForm.value.experience).subscribe((result)=>{
-//     //   console.log(result)
-//     // });
-//     this.BasicInfo.saveFormDetails(this.educationForm.value).subscribe((result)=>{
-//       console.log(result)
-//     });
-
-//   }
-//   ngOnInit(): void {
-//     this.filteredOptions = this.myControl.valueChanges.pipe(
-//       startWith(''),
-//       map(value => this._filter(value)),
-//     );
-//   }
-//   private _filter(value: string): string[] {
-//     const filterValue = value.toLowerCase();
-
-//     return this.options.filter(option => option.toLowerCase().includes(filterValue));
-//   }
-// }
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormBuilder, NgForm, Validators } from '@angular/forms'
 import { NumbersOnlyService } from 'src/app/services/numbers-only.service';
@@ -274,7 +117,8 @@ export class DashboardComponent implements OnInit {
     this.dataSource = JSON.parse(localStorage.getItem('dataSource'));
     this.userName = this.dataSource.data[0].Name;
     console.log(this.dataSource);
-
+    console.log(this.dataSource.data[0]);
+    
     //console.log(this.dataSource.data[0].CoverPicture);
     this.coverpicture = this.BaseUrl.get_baseurl() + this.dataSource.data[0].CoverPicture;
     console.log(this.coverpicture);
@@ -294,12 +138,12 @@ export class DashboardComponent implements OnInit {
       //   console.log(i);
         
       // }
-      if(this.education().length > 0){
+      if(this.education().length > 1){
       this.education().push(this.newEducation());
       }
       
       if(this.experience().length > 2){
-        this.experience().push(this.newEducation());
+        this.experience().push(this.newExperience());
       }
 
       (<FormGroup>this.educationForm).setValue({
@@ -498,11 +342,16 @@ export class DashboardComponent implements OnInit {
       this.educationForm.value.basicdetails[0].Salary=0;
     }
 if(this.file != undefined){
+  // debugger;
     this.BasicInfo.upload(this.file).subscribe(
       (event: any) => {
         console.log(event.url);
-        this.coverpicture = this.BaseUrl
+        this.coverpicture = this.BaseUrl.get_baseurl()+event.url;
         this.educationForm.value.basicdetails[0].CoverPicture = event.url; //this.educationForm.value.basicdetails[0].CoverPicture.replaceAll("\\", "\/");
+        console.log(this.coverpicture);
+        // this.coverpicture=this.dataSource.data[0].CoverPicture
+        this.dataSource.data[0].CoverPicture = event.url;
+        localStorage.setItem("dataSource",JSON.stringify(this.dataSource));
       });
     }
         //this.educationForm.value.basicdetails[0].CoverPicture=this.educationForm.value.basicdetails[0].CoverPicture.replaceAll("\\", "\/");
@@ -530,7 +379,7 @@ if(this.file != undefined){
       this.BasicInfo.saveFormDetails(this.educationForm.value).subscribe((result) => {
         console.log(result)
       });
-
+     
   }
   ngOnInit(): void {
     this.filteredOptions = this.myControl.valueChanges.pipe(
@@ -590,9 +439,3 @@ if(this.file != undefined){
 
   //  }
 }
-
-
-
-
-
-

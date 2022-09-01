@@ -45,7 +45,7 @@ export class HomeThreeComponent implements OnInit {
   districtLocation: any;
   duplicate: any;
   techval: any;
-  duplicateLocation: import("c:/Job_Portal/alzo-angular-job-board-template/alzo-ng/src/app/components/pages/jobs/model/job").jobdetails[];
+  // duplicateLocation: import("c:/Job_Portal/AI_RECRUITER/src/app/components/pages/jobs/model/job").jobdetails[];
   locatval: string;
   public searchedValue: any;
   // dummy={Search: this.form.value.search, Technology:'It Services',Location: 'Chennai'};
@@ -60,21 +60,21 @@ export class HomeThreeComponent implements OnInit {
 
     });
     
-    this.jobdetails.getduplicateDetails().subscribe((result: any) => {
-      //  console.log(result) 
-      this.duplicate = result.data;
-      console.log(this.duplicate)
-      console.log("Technology:", this.duplicate.map((tech) => tech.Technology).join(","))
-      this.techval = this.duplicate.map((tech) => tech.Technology).join(",");
-    });
+    // this.jobdetails.getduplicateDetails().subscribe((result: any) => {
+    //   //  console.log(result) 
+    //   this.duplicate = result.data;
+    //   console.log(this.duplicate)
+    //   console.log("Technology:", this.duplicate.map((tech) => tech.Technology).join(","))
+    //   this.techval = this.duplicate.map((tech) => tech.Technology).join(",");
+    // });
   
-    this.jobdetails.getduplicateLocationDetails().subscribe((result) => {
-      this.duplicateLocation = result.data;
-      console.log(this.duplicateLocation);
+    // this.jobdetails.getduplicateLocationDetails().subscribe((result) => {
+    //   this.duplicateLocation = result.data;
+    //   console.log(this.duplicateLocation);
 
-      console.log("Location:", this.duplicateLocation.map((loc) => loc.Location).join(","))
-      this.locatval = this.duplicateLocation.map((loc) => loc.Location).join(",");
-    });
+    //   console.log("Location:", this.duplicateLocation.map((loc) => loc.Location).join(","))
+    //   this.locatval = this.duplicateLocation.map((loc) => loc.Location).join(",");
+    // });
     this.homepageservice.saveHomecount().subscribe((result)=>{
       console.log(result);
       this.Usercount = result.data[0].userCount;
